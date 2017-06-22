@@ -24,14 +24,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^0.19.1",
     "babel-cli": "^6.18.0",
     "babel-polyfill": "^6.16.0",
     "babel-preset-latest": "^6.16.0",
-    "codeclimate-test-reporter": "^0.4.0",
+    "codeclimate-test-reporter": "^0.5.0",
     "coveralls": "^2.11.14",
-    "esdoc": "^0.4.8",
-    "nyc": "^8.4.0"
+    "esdoc": "^0.5.2",
+    "nyc": "^11.0.2"
   },
   "homepage": "https://aureooms.github.io/js-codec-base32",
   "keywords": ["base32", "codec", "decode", "encode", "strings"],
