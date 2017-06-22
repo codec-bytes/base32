@@ -14,3 +14,6 @@ See [docs](https://aureooms.github.io/js-codec-base32/index.html).
 [![NPM downloads per month](https://img.shields.io/npm/dm/@aureooms/js-codec-base32.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-codec-base32)
 [![GitHub issues](https://img.shields.io/github/issues/aureooms/js-codec-base32.svg?style=flat)](https://github.com/aureooms/js-codec-base32/issues)
 [![Documentation](https://aureooms.github.io/js-codec-base32/badge.svg)](https://aureooms.github.io/js-codec-base32/source.html)
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/aureooms/js-codec-base32.svg)](https://greenkeeper.io/)
