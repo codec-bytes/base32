@@ -1,10 +1,10 @@
 import { iter , next , StopIteration } from '@aureooms/js-itertools' ;
 import { ValueError } from '@aureooms/js-error' ;
 
-import byte5tochar8 from './byte3tochar4' ;
-import byte4tochar7 from './byte3tochar4' ;
-import byte3tochar5 from './byte3tochar4' ;
-import byte2tochar4 from './byte2tochar3' ;
+import byte5tochar8 from './byte5tochar8' ;
+import byte4tochar7 from './byte4tochar7' ;
+import byte3tochar5 from './byte3tochar5' ;
+import byte2tochar4 from './byte2tochar4' ;
 import byte1tochar2 from './byte1tochar2' ;
 
 import Base32DecodeError from './Base32DecodeError' ;

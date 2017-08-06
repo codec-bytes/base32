@@ -86,24 +86,25 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 
 		for ( let i = 0 ; i < stop ; ++i ) {
 
-			const c = digits[i] ;
+			const digit = digits[i] ;
 
-			if ( !index.hasOwnProperty(c) ) {
-				const reason = `not in alphabet ${c}` ;
+			if ( !index.hasOwnProperty(digit) ) {
+				const reason = `not in alphabet ${digit}` ;
 				const position = { start : start + i , end : start + i + 1 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 			}
 
-			else if ( i + 1 === stop && index[c] & mask[i] ) {
-				const reason = `trailing bits in ${digits.slice(0,i+1).join('')}, last digit should be ${options.alphabet[index[c] & ~mask[i]]}` ;
+			else if ( i + 1 === stop && index[digit] & mask[i] ) {
+				const reason = `trailing bits in ${digits.slice(0,i+1).join('')}, last digit should be ${options.alphabet[index[digit] & ~mask[i]]}` ;
 				const position = { start : start + i , end : start + i + 1 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 			}
 
 		}
 
+		const [ a , b , c , d , e , f , g , h ] = digits ;
+		let reason, position ;
 		switch ( stop ) {
-			const [ a , b , c , d , e , f , g , h ] = digits ;
 			case 8:
 				yield* char8tobyte5(index, a, b, c, d, e, f, g, h) ;
 				break;
@@ -111,8 +112,8 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 				yield* char7tobyte4(index, a, b, c, d, e, f, g) ;
 				break;
 			case 6:
-				const reason = `unterminated byte ${a}${b}${c}${d}${e}${f}` ;
-				const position = { start : start , end : start + 6 } ;
+				reason = `unterminated byte ${a}${b}${c}${d}${e}${f}` ;
+				position = { start : start , end : start + 6 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 			case 5:
 				yield* char5tobyte3(index, a, b, c, d, e) ;
@@ -121,15 +122,15 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 				yield* char4tobyte2(index, a, b, c, d) ;
 				break;
 			case 3:
-				const reason = `unterminated byte ${a}${b}${c}` ;
-				const position = { start : start , end : start + 3 } ;
+				reason = `unterminated byte ${a}${b}${c}` ;
+				position = { start : start , end : start + 3 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 			case 2:
 				yield* char2tobyte1(index, a, b) ;
 				break;
 			case 1:
-				const reason = `unterminated byte ${a}` ;
-				const position = { start : start , end : start + 1 } ;
+				reason = `unterminated byte ${a}` ;
+				position = { start : start , end : start + 1 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 		}
 
