@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">@aureooms/js-codec-base32 API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+<script data-ice="userScript" src="user/script/0-header.js"></script>
+<link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <a data-ice="repoURL" href="https://github.com/aureooms/js-codec-base32" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Base32DecodeError.js~Base32DecodeError.html">Base32DecodeError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Base32EncodeError.js~Base32EncodeError.html">Base32EncodeError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_decode">_decode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_encode">_encode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte1tochar2">byte1tochar2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte2tochar4">byte2tochar4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte3tochar5">byte3tochar5</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte4tochar7">byte4tochar7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte5tochar8">byte5tochar8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char2tobyte1">char2tobyte1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char4tobyte2">char4tobyte2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char5tobyte3">char5tobyte3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char7tobyte4">char7tobyte4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char8tobyte5">char8tobyte5</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-decode">decode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-encode">encode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-variants">variants</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-aureooms-js-codec-base32-https-aureooms-github-io-js-codec-base32-"><a href="https://aureooms.github.io/js-codec-base32">@aureooms/js-codec-base32</a></h1>
+<p>Base32 encoder/decoder for JavaScript.
+See <a href="https://aureooms.github.io/js-codec-base32/index.html">docs</a>.
+Parent is <a href="https://github.com/aureooms/js-codec">@aureooms/js-codec</a>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">&gt; import ascii from &apos;@aureooms/js-codec-ascii&apos; ;
+&gt; import base32 from &apos;@aureooms/js-codec-base32&apos; ;
+&gt; let bytes = ascii.encode(&apos;Hello!&apos;) ;
+&gt; base32.decode( bytes ) ;
+&apos;JBSWY3DPEE======&apos;
+&gt; base32.decode( bytes , { variant : &apos;base32hex&apos; } ) ;
+&apos;91IMOR3F44======&apos;
+&gt; base32.decode( bytes , { variant : &apos;z-base-32&apos; } ) ;
+&apos;jb1sa5dxrr&apos;
+&gt; base32.decode( bytes , { variant : &apos;crockford&apos; } ) ;
+&apos;91JPRV3F44&apos;
+&gt; base32.decode( bytes , { alphabet : &apos;BCDEFGHIJKLMNOPQRSTUVWXYZ234567A&apos; , padding : &apos;.&apos; } ) ;
+&apos;KCTXZ4EQFF......&apos;</code>
+</code></pre>
+<p><a href="https://raw.githubusercontent.com/aureooms/js-codec-base32/master/LICENSE"><img src="https://img.shields.io/github/license/aureooms/js-codec-base32.svg?style=flat" alt="License"></a>
+<a href="https://www.npmjs.org/package/@aureooms/js-codec-base32"><img src="https://img.shields.io/npm/v/@aureooms/js-codec-base32.svg?style=flat" alt="NPM version"></a>
+<a href="https://travis-ci.org/aureooms/js-codec-base32"><img src="https://img.shields.io/travis/aureooms/js-codec-base32.svg?style=flat" alt="Build status"></a>
+<a href="https://coveralls.io/r/aureooms/js-codec-base32"><img src="https://img.shields.io/coveralls/aureooms/js-codec-base32.svg?style=flat" alt="Coverage status"></a>
+<a href="https://david-dm.org/aureooms/js-codec-base32"><img src="https://img.shields.io/david/aureooms/js-codec-base32.svg?style=flat" alt="Dependencies status"></a>
+<a href="https://david-dm.org/aureooms/js-codec-base32?type=dev"><img src="https://img.shields.io/david/dev/aureooms/js-codec-base32.svg?style=flat" alt="Dev dependencies status"></a>
+<a href="https://codeclimate.com/github/aureooms/js-codec-base32"><img src="https://img.shields.io/codeclimate/github/aureooms/js-codec-base32.svg?style=flat" alt="Code Climate"></a>
+<a href="https://www.npmjs.org/package/@aureooms/js-codec-base32"><img src="https://img.shields.io/npm/dm/@aureooms/js-codec-base32.svg?style=flat" alt="NPM downloads per month"></a>
+<a href="https://github.com/aureooms/js-codec-base32/issues"><img src="https://img.shields.io/github/issues/aureooms/js-codec-base32.svg?style=flat" alt="GitHub issues"></a>
+<a href="https://aureooms.github.io/js-codec-base32/source.html"><img src="https://aureooms.github.io/js-codec-base32/badge.svg" alt="Documentation"></a></p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

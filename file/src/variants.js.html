@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/variants.js | @aureooms/js-codec-base32 API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+<script data-ice="userScript" src="user/script/0-header.js"></script>
+<link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <a data-ice="repoURL" href="https://github.com/aureooms/js-codec-base32" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Base32DecodeError.js~Base32DecodeError.html">Base32DecodeError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Base32EncodeError.js~Base32EncodeError.html">Base32EncodeError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_decode">_decode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_encode">_encode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte1tochar2">byte1tochar2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte2tochar4">byte2tochar4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte3tochar5">byte3tochar5</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte4tochar7">byte4tochar7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-byte5tochar8">byte5tochar8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char2tobyte1">char2tobyte1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char4tobyte2">char4tobyte2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char5tobyte3">char5tobyte3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char7tobyte4">char7tobyte4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-char8tobyte5">char8tobyte5</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-decode">decode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-encode">encode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-variants">variants</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/variants.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { enumerate } from &apos;@aureooms/js-itertools&apos; ;
+
+import { object , reflect } from &apos;@aureooms/js-mapping&apos; ;
+
+const variants = {
+
+	// standard ``base32&apos;&apos;
+	&apos;RFC4648&apos; : {
+		&apos;alphabet&apos; : &apos;ABCDEFGHIJKLMNOPQRSTUVWXYZ234567&apos; ,
+		&apos;padding&apos; : &apos;=&apos; ,
+	} ,
+
+	// also RFC4648 (used by NSEC3)
+	// ``encoded data maintains its sort order when the encoded data is compared bit-wise&apos;&apos;
+	&apos;base32hex&apos; : {
+		&apos;alphabet&apos; : &apos;0123456789ABCDEFGHIJKLMNOPQRSTUV&apos; ,
+		&apos;padding&apos; : &apos;=&apos; ,
+	} ,
+
+	// ``easier for human use and more compact&apos;&apos;
+	&apos;z-base-32&apos; : {
+		&apos;alphabet&apos; : &apos;ybndrfg8ejkmcpqxot1uwisza345h769&apos; ,
+		&apos;padding&apos; : false ,
+	} ,
+
+	// It excludes the letters I, L, and O to avoid confusion with digits. It
+	// also excludes the letter U to reduce the likelihood of accidental
+	// obscenity.
+	// See http://www.crockford.com/wrmg/base32.html
+	&apos;crockford&apos; : {
+		&apos;alphabet&apos; : &apos;0123456789ABCDEFGHJKMNPQRSTVWXYZ&apos; ,
+		&apos;padding&apos; : false ,
+		&apos;index&apos; : {
+			&apos;0&apos; : 0,
+			&apos;o&apos; : 0,
+			&apos;O&apos; : 0,
+			&apos;1&apos; : 1,
+			&apos;i&apos; : 1,
+			&apos;I&apos; : 1,
+			&apos;l&apos; : 1,
+			&apos;L&apos; : 1,
+			&apos;2&apos; : 2,
+			&apos;3&apos; : 3,
+			&apos;4&apos; : 4,
+			&apos;5&apos; : 5,
+			&apos;6&apos; : 6,
+			&apos;7&apos; : 7,
+			&apos;8&apos; : 8,
+			&apos;9&apos; : 9,
+			&apos;a&apos; : 10,
+			&apos;A&apos; : 10,
+			&apos;b&apos; : 11,
+			&apos;B&apos; : 11,
+			&apos;c&apos; : 12,
+			&apos;C&apos; : 12,
+			&apos;d&apos; : 13,
+			&apos;D&apos; : 13,
+			&apos;e&apos; : 14,
+			&apos;E&apos; : 14,
+			&apos;f&apos; : 15,
+			&apos;F&apos; : 15,
+			&apos;g&apos; : 16,
+			&apos;G&apos; : 16,
+			&apos;h&apos; : 17,
+			&apos;H&apos; : 17,
+			&apos;j&apos; : 18,
+			&apos;J&apos; : 18,
+			&apos;k&apos; : 19,
+			&apos;K&apos; : 19,
+			&apos;m&apos; : 20,
+			&apos;M&apos; : 20,
+			&apos;n&apos; : 21,
+			&apos;N&apos; : 21,
+			&apos;p&apos; : 22,
+			&apos;P&apos; : 22,
+			&apos;q&apos; : 23,
+			&apos;Q&apos; : 23,
+			&apos;r&apos; : 24,
+			&apos;R&apos; : 24,
+			&apos;s&apos; : 25,
+			&apos;S&apos; : 25,
+			&apos;t&apos; : 26,
+			&apos;T&apos; : 26,
+			&apos;v&apos; : 27,
+			&apos;V&apos; : 27,
+			&apos;w&apos; : 28,
+			&apos;W&apos; : 28,
+			&apos;x&apos; : 29,
+			&apos;X&apos; : 29,
+			&apos;y&apos; : 30,
+			&apos;Y&apos; : 30,
+			&apos;z&apos; : 31,
+			&apos;Z&apos; : 31,
+		} ,
+	} ,
+
+} ;
+
+for ( const variant in variants ) {
+	if ( variants[variant].index ) continue ;
+	variants[variant].index = object( reflect( enumerate( variants[variant].alphabet ) ) ) ;
+}
+
+variants[&apos;default&apos;] = variants[&apos;base32&apos;] = variants[&apos;RFC3548&apos;] = variants[&apos;RFC4648&apos;] ;
+variants[&apos;RFC2938&apos;] = variants[&apos;base32hex&apos;] ;
+variants[&apos;Crockford&apos;] = variants[&apos;crockford&apos;] ;
+
+export default variants ;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
