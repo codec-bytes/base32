@@ -80,4 +80,12 @@ test(
 	NotImplementedError ,
 ) ;
 
+// variants
 test( from_ascii , 'Hello' , { variant : 'base32hex' } , '91IMOR3F' ) ;
+
+// readme
+test( from_ascii , 'Hello!' , undefined , 'JBSWY3DPEE======' ) ;
+test( from_ascii , 'Hello!' , { variant : 'base32hex' } , '91IMOR3F44======' ) ;
+test( from_ascii , 'Hello!' , { variant : 'z-base-32' } , 'jb1sa5dxrr' ) ;
+test( from_ascii , 'Hello!' , { variant : 'crockford' } , '91JPRV3F44' ) ;
+test( from_ascii , 'Hello!' , { alphabet : 'BCDEFGHIJKLMNOPQRSTUVWXYZ234567A' , padding : '.' } , 'KCTXZ4EQFF......' ) ;

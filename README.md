@@ -6,6 +6,19 @@ See [docs](https://aureooms.github.io/js-codec-base32/index.html).
 Parent is [@aureooms/js-codec](https://github.com/aureooms/js-codec).
 
 ```js
+> import ascii from '@aureooms/js-codec-ascii' ;
+> import base32 from '@aureooms/js-codec-base32' ;
+> let bytes = ascii.encode('Hello!') ;
+> base32.decode( bytes ) ;
+'JBSWY3DPEE======'
+> base32.decode( bytes , { variant : 'base32hex' } ) ;
+'91IMOR3F44======'
+> base32.decode( bytes , { variant : 'z-base-32' } ) ;
+'jb1sa5dxrr'
+> base32.decode( bytes , { variant : 'crockford' } ) ;
+'91JPRV3F44'
+> base32.decode( bytes , { alphabet : 'BCDEFGHIJKLMNOPQRSTUVWXYZ234567A' , padding : '.' } ) ;
+'KCTXZ4EQFF......'
 ```
 
 [![License](https://img.shields.io/github/license/aureooms/js-codec-base32.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-codec-base32/master/LICENSE)
