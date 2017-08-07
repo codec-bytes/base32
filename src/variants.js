@@ -26,7 +26,8 @@ const variants = {
 	// It excludes the letters I, L, and O to avoid confusion with digits. It
 	// also excludes the letter U to reduce the likelihood of accidental
 	// obscenity.
-	'Crockford' : {
+	// See http://www.crockford.com/wrmg/base32.html
+	'crockford' : {
 		'alphabet' : '0123456789ABCDEFGHJKMNPQRSTVWXYZ' ,
 		'padding' : false ,
 		'index' : {
@@ -99,5 +100,9 @@ for ( const variant in variants ) {
 	if ( variants[variant].index ) continue ;
 	variants[variant].index = object( reflect( enumerate( variants[variant].alphabet ) ) ) ;
 }
+
+variants['default'] = variants['base32'] = variants['RFC3548'] = variants['RFC4648'] ;
+variants['RFC2938'] = variants['base32hex'] ;
+variants['Crockford'] = variants['crockford'] ;
 
 export default variants ;

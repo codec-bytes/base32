@@ -82,7 +82,7 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 
 		}
 
-		const mask = [ 0 , 7 , 0 , 15 , 1 , 0 , 3 ] ;
+		const mask = [ 0 , 3 , 0 , 15 , 1 , 0 , 7 , 0 ] ;
 
 		for ( let i = 0 ; i < stop ; ++i ) {
 
@@ -94,7 +94,13 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 				throw new Base32EncodeError( reason , string , position ) ;
 			}
 
-			else if ( i + 1 === stop && index[digit] & mask[i] ) {
+			// a1 a2 a3 a4 a5 b1 b2 b3
+			// b4 b5 c1 c2 c3 c4 c5 d1
+			// d2 d3 d4 d5 e1 e2 e3 e4
+			// e5 f1 f2 f3 f4 f5 g1 g2
+			// g3 g4 g5 h1 h2 h3 h4 h5
+
+			else if ( i + 1 === stop && ( index[digit] & mask[i] ) ) {
 				const reason = `trailing bits in ${digits.slice(0,i+1).join('')}, last digit should be ${options.alphabet[index[digit] & ~mask[i]]}` ;
 				const position = { start : start + i , end : start + i + 1 } ;
 				throw new Base32EncodeError( reason , string , position ) ;

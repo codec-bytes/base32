@@ -1,3 +1,3 @@
 import variants from './variants' ;
 
-export default variants['RFC4648'] ;
+export default variants['default'] ;

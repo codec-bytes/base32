@@ -1,6 +1,6 @@
 import test from 'ava' ;
 import ascii from '@aureooms/js-codec-ascii' ;
-import { ValueError } from '@aureooms/js-error' ;
+import { ValueError , NotImplementedError } from '@aureooms/js-error' ;
 import { CodecError } from '@aureooms/js-codec' ;
 import { range } from '@aureooms/js-itertools' ;
 
@@ -14,7 +14,7 @@ function success ( t , bytes , options , expected ) {
 
 }
 
-success.title = ( _ , bytes , options , expected ) => `decode '${bytes}' ${JSON.stringify(options)} succeed` ;
+success.title = ( _ , bytes , options , expected ) => `decode '${bytes}' ${JSON.stringify(options)} should succeed` ;
 
 function from_ascii ( t , string , options , expected ) {
 	const bytes = ascii.encode( string ) ;
@@ -39,4 +39,43 @@ function failure ( t , bytes , options , ExpectedError , position ) {
 
 failure.title = ( _ , bytes , options , expected ) => `decode '${bytes}' ${JSON.stringify(options)} should fail` ;
 
-test( from_ascii , 'test' , undefined , 'ORSXG5A=' ) ;
+test( from_ascii , ''      , undefined , ''         ) ;
+test( from_ascii , 't'     , undefined , 'OQ======' ) ;
+test( from_ascii , 'te'    , undefined , 'ORSQ====' ) ;
+test( from_ascii , 'tes'   , undefined , 'ORSXG===' ) ;
+test( from_ascii , 'test'  , undefined , 'ORSXG5A=' ) ;
+test( from_ascii , 'test!' , undefined , 'ORSXG5BB' ) ;
+
+test( from_ascii , 'A'     , undefined , 'IE======' ) ;
+test( from_ascii , 'AB'    , undefined , 'IFBA====' ) ;
+test( from_ascii , 'ABC'   , undefined , 'IFBEG===' ) ;
+test( from_ascii , 'ABCD'  , undefined , 'IFBEGRA=' ) ;
+test( from_ascii , 'ABCDE' , undefined , 'IFBEGRCF' ) ;
+
+test(
+	from_ascii ,
+	'This text will be encoded in base32 and then decoded back again' ,
+	undefined ,
+	'KRUGS4ZAORSXQ5BAO5UWY3BAMJSSAZLOMNXWIZLEEBUW4IDCMFZWKMZSEBQW4ZBAORUGK3RAMRSWG33EMVSCAYTBMNVSAYLHMFUW4===' ,
+) ;
+
+test( failure , [] , { variant : '?' } , ValueError ) ;
+
+test( failure , [ 1024 ] , undefined , Base32DecodeError , { start : 0 , end : 1 } ) ;
+test( failure , [ 0x00 , 1024 ] , undefined , Base32DecodeError , { start : 1 , end : 2 } ) ;
+test( failure , [ 0x00 , 0x00 , 1024 ] , undefined , Base32DecodeError , { start : 2 , end : 3 } ) ;
+test( failure , [ 0x00 , 0x00 , 0x00 , 1024 ] , undefined , Base32DecodeError , { start : 3 , end : 4 } ) ;
+test( failure , [ 0x00 , 0x00 , 0x00 , 0x00 , 1024 ] , undefined , Base32DecodeError , { start : 4 , end : 5 } ) ;
+
+test(
+	failure ,
+	{
+		[Symbol.iterator] : function ( ) {
+			return {
+				next : function () { throw new NotImplementedError() ; }
+			} ;
+		}
+	} ,
+	undefined ,
+	NotImplementedError ,
+) ;
