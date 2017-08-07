@@ -78,3 +78,78 @@ test(
 	undefined ,
 	NotImplementedError ,
 ) ;
+
+// padding at wrong position
+test( failure , '========' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+
+// incorrect padding
+test( failure , 'AA=?' , undefined , Base32EncodeError , { start : 3 , end : 4 } ) ;
+test( failure , 'AA==A' , undefined , Base32EncodeError , { start : 4 , end : 5 } ) ;
+test( failure , 'AA===*' , undefined , Base32EncodeError , { start : 5 , end : 6 } ) ;
+test( failure , 'AA====8' , undefined , Base32EncodeError , { start : 6 , end : 7 } ) ;
+test( failure , 'AA=====&' , undefined , Base32EncodeError , { start : 7 , end : 8 } ) ;
+
+test( failure , 'AAAA=?' , undefined , Base32EncodeError , { start : 5 , end : 6 } ) ;
+test( failure , 'AAAA==A' , undefined , Base32EncodeError , { start : 6 , end : 7 } ) ;
+test( failure , 'AAAA===*' , undefined , Base32EncodeError , { start : 7 , end : 8 } ) ;
+
+
+// unterminated padding
+test( failure , 'AA' , undefined , Base32EncodeError , { start : 0 , end : 2 } ) ;
+test( failure , 'AAAA' , undefined , Base32EncodeError , { start : 0 , end : 4 } ) ;
+test( failure , 'AAAAA' , undefined , Base32EncodeError , { start : 0 , end : 5 } ) ;
+test( failure , 'AAAAAAA' , undefined , Base32EncodeError , { start : 0 , end : 7 } ) ;
+
+test( failure , 'AA=' , undefined , Base32EncodeError , { start : 0 , end : 3 } ) ;
+test( failure , 'AA==' , undefined , Base32EncodeError , { start : 0 , end : 4 } ) ;
+test( failure , 'AA===' , undefined , Base32EncodeError , { start : 0 , end : 5 } ) ;
+test( failure , 'AA====' , undefined , Base32EncodeError , { start : 0 , end : 6 } ) ;
+test( failure , 'AA=====' , undefined , Base32EncodeError , { start : 0 , end : 7 } ) ;
+
+test( failure , 'AAAA=' , undefined , Base32EncodeError , { start : 0 , end : 5 } ) ;
+test( failure , 'AAAA==' , undefined , Base32EncodeError , { start : 0 , end : 6 } ) ;
+test( failure , 'AAAA===' , undefined , Base32EncodeError , { start : 0 , end : 7 } ) ;
+
+test( failure , 'AAAAA=' , undefined , Base32EncodeError , { start : 0 , end : 6 } ) ;
+test( failure , 'AAAAA==' , undefined , Base32EncodeError , { start : 0 , end : 7 } ) ;
+
+// not in alphabet ${digit}
+test( failure , 'Z=======' , { variant : 'base32hex'} , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , '0Z======' , { variant : 'base32hex'} , Base32EncodeError , { start : 1 , end : 2 } ) ;
+test( failure , '00Z=====' , { variant : 'base32hex'} , Base32EncodeError , { start : 2 , end : 3 } ) ;
+test( failure , '000Z====' , { variant : 'base32hex'} , Base32EncodeError , { start : 3 , end : 4 } ) ;
+test( failure , '0000Z===' , { variant : 'base32hex'} , Base32EncodeError , { start : 4 , end : 5 } ) ;
+test( failure , '00000Z==' , { variant : 'base32hex'} , Base32EncodeError , { start : 5 , end : 6 } ) ;
+test( failure , '000000Z=' , { variant : 'base32hex'} , Base32EncodeError , { start : 6 , end : 7 } ) ;
+test( failure , '0000000Z' , { variant : 'base32hex'} , Base32EncodeError , { start : 7 , end : 8 } ) ;
+
+// unterminated byte sequence
+test( failure , 'A' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'A=' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'A==' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'A===' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'A====' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'A=====' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'A======' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'A=======' , undefined , Base32EncodeError , { start : 0 , end : 1 } ) ;
+test( failure , 'AAA' , undefined , Base32EncodeError , { start : 0 , end : 3 } ) ;
+test( failure , 'AAA=' , undefined , Base32EncodeError , { start : 0 , end : 3 } ) ;
+test( failure , 'AAA==' , undefined , Base32EncodeError , { start : 0 , end : 3 } ) ;
+test( failure , 'AAA===' , undefined , Base32EncodeError , { start : 0 , end : 3 } ) ;
+test( failure , 'AAA====' , undefined , Base32EncodeError , { start : 0 , end : 3 } ) ;
+test( failure , 'AAA=====' , undefined , Base32EncodeError , { start : 0 , end : 3 } ) ;
+test( failure , 'AAAAAA=' , undefined , Base32EncodeError , { start : 0 , end : 6 } ) ;
+test( failure , 'AAAAAA==' , undefined , Base32EncodeError , { start : 0 , end : 6 } ) ;
+test( failure , 'AAAAAA=?' , undefined , Base32EncodeError , { start : 0 , end : 6 } ) ;
+
+test( failure , 'BBBBBBBBA=======' , undefined , Base32EncodeError , { start : 8 , end : 9 } ) ;
+test( failure , 'BBBBBBBBAAA=====' , undefined , Base32EncodeError , { start : 8 , end : 11 } ) ;
+test( failure , 'BBBBBBBBAAAAAA==' , undefined , Base32EncodeError , { start : 8 , end : 14 } ) ;
+
+// input continues after padding
+test( failure , 'AA=======' , undefined , Base32EncodeError , { start : 8 , end : 9 } ) ;
+test( failure , 'AA======A' , undefined , Base32EncodeError , { start : 8 , end : 9 } ) ;
+test( failure , 'AA======?' , undefined , Base32EncodeError , { start : 8 , end : 9 } ) ;
+
+// variants
+test( from_ascii , '91IMOR3F' , { variant : 'base32hex' } , 'Hello' ) ;

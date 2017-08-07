@@ -53,31 +53,27 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 
 		if ( padding ) {
 
-			if ( stop === 2 || stop === 4 || stop === 5 || stop === 7 ) {
-				const reason = `missing padding after ${digits.join('')}` ;
-				const position = { start : start , end : start + stop } ;
-				throw new Base32EncodeError( reason , string , position ) ;
-			}
-
 			stop = digits.indexOf(padding) ;
 			stop = stop === -1 ? digits.length : stop ;
-			if ( stop === 0 || stop === 1 || stop === 3 || stop === 6 ) {
+			if ( stop === 0 ) {
 				const reason = `padding at wrong position in ${digits.join('')}` ;
 				const position = { start : start + stop , end : start + stop + 1 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 			}
-			for ( let i = stop + 1 ; i < digits.length ; ++i ) {
-				if ( digits[i] !== padding ) {
-					const reason = `incorrect padding end in ${digits.join('')}` ;
-					const position = { start : start + i , end : start + i + 1 } ;
+			else if ( stop === 2 || stop === 4 || stop === 5 || stop === 7 ) {
+				for ( let i = stop + 1 ; i < digits.length ; ++i ) {
+					if ( digits[i] !== padding ) {
+						const reason = `incorrect padding end in ${digits.join('')}` ;
+						const position = { start : start + i , end : start + i + 1 } ;
+						throw new Base32EncodeError( reason , string , position ) ;
+					}
+				}
+
+				if ( digits.length !== 8 ) {
+					const reason = `missing padding in ${digits.join('')}` ;
+					const position = { start : start , end : start + digits.length } ;
 					throw new Base32EncodeError( reason , string , position ) ;
 				}
-			}
-
-			if ( digits.length !== 8 ) {
-				const reason = `unterminated padding in ${digits.join('')}` ;
-				const position = { start : start + stop , end : start + digits.length } ;
-				throw new Base32EncodeError( reason , string , position ) ;
 			}
 
 		}
@@ -113,12 +109,13 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 		switch ( stop ) {
 			case 8:
 				yield* char8tobyte5(index, a, b, c, d, e, f, g, h) ;
-				break;
+				start += 8 ;
+				continue;
 			case 7:
 				yield* char7tobyte4(index, a, b, c, d, e, f, g) ;
 				break;
 			case 6:
-				reason = `unterminated byte ${a}${b}${c}${d}${e}${f}` ;
+				reason = `unterminated byte sequence ${a}${b}${c}${d}${e}${f}` ;
 				position = { start : start , end : start + 6 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 			case 5:
@@ -128,19 +125,38 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 				yield* char4tobyte2(index, a, b, c, d) ;
 				break;
 			case 3:
-				reason = `unterminated byte ${a}${b}${c}` ;
+				reason = `unterminated byte sequence ${a}${b}${c}` ;
 				position = { start : start , end : start + 3 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 			case 2:
 				yield* char2tobyte1(index, a, b) ;
 				break;
 			case 1:
-				reason = `unterminated byte ${a}` ;
+				reason = `unterminated byte sequence ${a}` ;
 				position = { start : start , end : start + 1 } ;
 				throw new Base32EncodeError( reason , string , position ) ;
 		}
 
-		start += 8 ;
+		if ( padding ) {
+
+			let extra ;
+
+			try {
+				extra = next( it ) ;
+			}
+			catch ( err ) {
+				if ( err instanceof StopIteration ) break ;
+				else throw err ;
+			}
+
+			reason = `input continues after padding ${extra}` ;
+			position = { start : start + 8 , end : start + 9 } ;
+
+			throw new Base32EncodeError( reason , string , position ) ;
+
+		}
+
+		else break ;
 
 	}
 

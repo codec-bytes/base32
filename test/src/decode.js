@@ -79,3 +79,5 @@ test(
 	undefined ,
 	NotImplementedError ,
 ) ;
+
+test( from_ascii , 'Hello' , { variant : 'base32hex' } , '91IMOR3F' ) ;
