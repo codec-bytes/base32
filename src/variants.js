@@ -23,6 +23,18 @@ const variants = {
 		'padding' : false ,
 	} ,
 
+    // ``uses letter-case for checksums''
+    'base32cc' : {
+        'alphabet': '456789ABCDEFGHIJKLMNOPQRSTUVWXYZ' ,
+        'padding': false ,
+    } ,
+
+    // ``unchecked base32cc, maintains sort order like base32hex (REFC4648)''
+    'base32c' : {
+        'alphabet': '456789ABCDEFGHIJKLMNOPQRSTUVWXYZ' ,
+        'padding': false ,
+    } ,
+
 	// It excludes the letters I, L, and O to avoid confusion with digits. It
 	// also excludes the letter U to reduce the likelihood of accidental
 	// obscenity.
@@ -104,5 +116,7 @@ for ( const variant in variants ) {
 variants['default'] = variants['base32'] = variants['RFC3548'] = variants['RFC4648'] ;
 variants['RFC2938'] = variants['base32hex'] ;
 variants['Crockford'] = variants['crockford'] ;
+variants['base32case'] = variants['b32c'] = variants['base32c'] ;
+variants['base32casecheck'] = variants['b32cc'] = variants['base32cc'] ;
 
 export default variants ;

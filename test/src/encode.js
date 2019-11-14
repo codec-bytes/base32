@@ -151,5 +151,18 @@ test( failure , 'AA=======' , undefined , Base32EncodeError , { start : 8 , end 
 test( failure , 'AA======A' , undefined , Base32EncodeError , { start : 8 , end : 9 } ) ;
 test( failure , 'AA======?' , undefined , Base32EncodeError , { start : 8 , end : 9 } ) ;
 
-// variants
+// base32hex
 test( from_ascii , '91IMOR3F' , { variant : 'base32hex' } , 'Hello' ) ;
+
+// base32case
+test( from_ascii, '44444', { variant : 'base32c' } , '\0\0\0' );
+test( from_ascii, 'D5MQSV7J', { variant : 'base32c' } , 'Hello' );
+// failure: not in alphabet
+test( failure, 'd5MqsV7j', { variant : 'base32c' } , Base32EncodeError, {start: 0, end: 1} );
+
+// base32casecheck
+test( from_ascii, '44444', { variant : 'base32cc' } , '\0\0\0' );
+test( from_ascii, 'd5MqsV7j', { variant : 'base32cc' } , 'Hello' );
+// failure: checksum fail
+test( failure, 'D5MQSV7J', { variant : 'base32cc' } , CodecError, { start : 0, end: 1 } );
+test( failure, 'd5MQSV7J', { variant : 'base32cc' } , CodecError, { start : 3, end: 4 } );

@@ -80,8 +80,14 @@ test(
 	NotImplementedError ,
 ) ;
 
-// variants
+// base32hex
 test( from_ascii , 'Hello' , { variant : 'base32hex' } , '91IMOR3F' ) ;
+
+// base32c
+test( from_ascii, 'Hello', { variant : 'base32c' } , 'D5MQSV7J' );
+
+// base32cc
+test( from_ascii, 'Hello', { variant : 'base32cc' } , 'd5MqsV7j' ); // check-bits: 0110 0110
 
 // readme
 test( from_ascii , 'Hello!' , undefined , 'JBSWY3DPEE======' ) ;

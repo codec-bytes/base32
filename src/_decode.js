@@ -1,3 +1,5 @@
+import { sha256 } from 'js-sha256';
+
 import { iter , next , StopIteration } from '@aureooms/js-itertools' ;
 import { ValueError } from '@aureooms/js-error' ;
 
@@ -22,6 +24,10 @@ export default function* _decode ( bytes , options = DEFAULT_OPTIONS ) {
 			throw new ValueError( `unknown Base32 variant ${options.variant}` ) ;
 		}
 	}
+
+    if ( options.variant == 'base32cc' ) {
+        const hash = sha256(bytes);
+    }
 
 	let start = 0 ;
 

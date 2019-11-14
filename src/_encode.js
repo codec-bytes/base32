@@ -1,3 +1,5 @@
+import { sha256 } from 'js-sha256';
+
 import { iter , next , StopIteration , enumerate } from '@aureooms/js-itertools' ;
 import { object , reflect } from '@aureooms/js-mapping' ;
 import { ValueError } from '@aureooms/js-error' ;
@@ -23,6 +25,29 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 			throw new ValueError( `unknown Base32 variant ${options.variant}` ) ;
 		}
 	}
+
+    function getBit(bytes, index) {
+        throw new NotImplementedError(`getBit`);
+    }
+
+    if ( options.variant == 'base32cc' ) {
+        const bytes = _encode(string.toUpperCase(), options);
+        const hash = sha256(bytes);
+        for( var i = 0; i < string.length; i++ ) {
+            let c = string[i];
+            if( getBit(hash, i % 256) == 1 ) {
+                if (c.isLowerCase()) { 
+                    let errstr = `failed checksum: ${c} at position ${i} in ${string} should be uppercase`;
+                    throw new ValueError(errstr);
+                }
+            } else { // getBit(hash, i % 256) == 0
+                if (c.isUpperCase()) { 
+                    let errstr = `failed checksum: ${c} at position ${i} in ${string} should be lowercase`;
+                    throw new ValueError(errstr);
+                }
+            }
+        }
+    }
 
 	let start = 0 ;
 
