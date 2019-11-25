@@ -23,7 +23,7 @@
     "url": "https://github.com/aureooms/js-codec-base32/issues"
   },
   "dependencies": {
-    "@aureooms/js-error": "^3.0.0",
+    "@aureooms/js-error": "^4.0.0",
     "@aureooms/js-itertools": "^3.3.0",
     "@aureooms/js-mapping": "^3.1.0"
   },
