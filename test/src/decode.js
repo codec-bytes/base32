@@ -25,14 +25,14 @@ from_ascii.title = success.title ;
 
 function failure ( t , bytes , options , ExpectedError , position ) {
 
-	t.throws( ( ) => decode( bytes , options ) , ExpectedError ) ;
+	const error = t.throws( ( ) => decode( bytes , options ) , { instanceOf: ExpectedError } ) ;
 
 	if ( position ) {
-		t.throws( ( ) => decode( bytes , options ) , CodecError ) ;
-		t.throws( ( ) => decode( bytes , options ) , ( error ) => error.encoding === 'base32' ) ;
-		t.throws( ( ) => decode( bytes , options ) , ( error ) => error.object === bytes ) ;
-		t.throws( ( ) => decode( bytes , options ) , ( error ) => error.position.start === position.start ) ;
-		t.throws( ( ) => decode( bytes , options ) , ( error ) => error.position.end === position.end ) ;
+		t.true( error instanceof CodecError ) ;
+		t.is( error.encoding , 'base32' ) ;
+		t.is( error.object , bytes ) ;
+		t.is( error.position.start , position.start ) ;
+		t.is( error.position.end , position.end ) ;
 	}
 
 }
