@@ -36,10 +36,10 @@
     "@aureooms/js-collections-deque" "^4.0.0"
     "@aureooms/js-error" "^4.0.0"
 
-"@aureooms/js-mapping@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-mapping/-/js-mapping-3.1.0.tgz#3590a8f535b2e0753fabe868681d6173acd9746b"
-  integrity sha512-NasiGBH4q1hLCPyA/GO578dCzl7MMDTDAE8leYt3b4D7Yr0NWPTNL1eUAE7F5E6IYpAdgaM7NDmNuj8zUT5+Dw==
+"@aureooms/js-mapping@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-mapping/-/js-mapping-4.0.0.tgz#ae83268a6b4e6ae7d4b1ff185bd2416c34e2064e"
+  integrity sha512-zSs5uEBlosLwG2MWiHdCKounMQ84AG5RXrmKiA9g1QrErOu6quQZu2dZp5gbG0pS0cS2V9H/txJnuMw54hhtEw==
 
 "@babel/cli@7.10.1":
   version "7.10.1"
