@@ -21,9 +21,9 @@ Parent is [@aureooms/js-codec](https://github.com/aureooms/js-codec).
 'KCTXZ4EQFF......'
 ```
 
-[![License](https://img.shields.io/github/license/aureooms/js-codec-base32.svg)](https://raw.githubusercontent.com/aureooms/js-codec-base32/master/LICENSE)
+[![License](https://img.shields.io/github/license/aureooms/js-codec-base32.svg)](https://raw.githubusercontent.com/aureooms/js-codec-base32/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@aureooms/js-codec-base32.svg)](https://www.npmjs.org/package/@aureooms/js-codec-base32)
-[![Build](https://img.shields.io/travis/aureooms/js-codec-base32/master.svg)](https://travis-ci.org/aureooms/js-codec-base32/branches)
+[![Build](https://img.shields.io/travis/aureooms/js-codec-base32/main.svg)](https://travis-ci.org/aureooms/js-codec-base32/branches)
 [![Dependencies](https://img.shields.io/david/aureooms/js-codec-base32.svg)](https://david-dm.org/aureooms/js-codec-base32)
 [![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-codec-base32.svg)](https://david-dm.org/aureooms/js-codec-base32?type=dev)
 [![GitHub issues](https://img.shields.io/github/issues/aureooms/js-codec-base32.svg)](https://github.com/aureooms/js-codec-base32/issues)
@@ -31,7 +31,7 @@ Parent is [@aureooms/js-codec](https://github.com/aureooms/js-codec).
 
 [![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-codec-base32.svg)](https://codeclimate.com/github/aureooms/js-codec-base32/issues)
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-codec-base32.svg)](https://codeclimate.com/github/aureooms/js-codec-base32/trends/churn)
-[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-codec-base32/master.svg)](https://codecov.io/gh/aureooms/js-codec-base32)
+[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-codec-base32/main.svg)](https://codecov.io/gh/aureooms/js-codec-base32)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-codec-base32.svg)](https://codeclimate.com/github/aureooms/js-codec-base32/trends/technical_debt)
 [![Documentation](https://aureooms.github.io/js-codec-base32/badge.svg)](https://aureooms.github.io/js-codec-base32/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-codec-base32)](https://bundlephobia.com/result?p=@aureooms/js-codec-base32)
