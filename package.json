@@ -79,7 +79,7 @@
     "@aureooms/js-codec": "^4.0.0",
     "@aureooms/js-error": "^5.0.0",
     "@aureooms/js-itertools": "^5.0.0",
-    "@aureooms/js-mapping": "^4.0.0"
+    "@aureooms/js-mapping": "^5.0.0"
   },
   "devDependencies": {
     "@aureooms/js-codec-ascii": "2.0.1",
