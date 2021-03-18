@@ -16,6 +16,13 @@
   dependencies:
     "@aureooms/js-error" "^4.0.0"
 
+"@aureooms/js-codec@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-codec/-/js-codec-4.0.0.tgz#909f0c07ced6a3bb604ce4cfd6a4ee6a2870067e"
+  integrity sha512-CnxP4uSwvqWDNQTbihBVc3Y3VEzBHaxu5zV+jkwVleyxuLOhYH+5joZl2NIHmCkizsapZHKLnDnw3EJP2sQmwg==
+  dependencies:
+    "@aureooms/js-error" "^5.0.2"
+
 "@aureooms/js-collections-deque@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@aureooms/js-collections-deque/-/js-collections-deque-5.0.0.tgz#a574ddc2e53d8e073573f914cec9b130cf5355a8"
@@ -33,7 +40,7 @@
   resolved "https://registry.yarnpkg.com/@aureooms/js-error/-/js-error-5.0.1.tgz#474e2f1dd7189f97df770b5cc6f1bda536de262d"
   integrity sha512-BbbpKpp4W8L2x9vL4bas+JtuAe4PMojzTpf21puHPw5p3S+lgKd8SfS9y40pVHi/b3SrQrdpmsaEKjL4xviilQ==
 
-"@aureooms/js-error@^5.0.1":
+"@aureooms/js-error@^5.0.1", "@aureooms/js-error@^5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@aureooms/js-error/-/js-error-5.0.2.tgz#dc2ad2fc2b10365581c32c28222daccc5c3c9600"
   integrity sha512-HLO95kmZ1nJV5qo8Xq7czHVskFGPkM3l60JFgdTnpvCH6P6lkyWDBplaDB9gI5cPvcRIZDs1HeAHhAlHR/jBxw==
