@@ -73,7 +73,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/aureooms/js-codec-base32/issues"
+    "url": "https://github.com/make-github-pseudonymous-again/js-codec-base32/issues"
   },
   "dependencies": {
     "@aureooms/js-codec": "^4.0.0",
@@ -116,7 +116,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aureooms/js-codec-base32"
+    "url": "https://github.com/make-github-pseudonymous-again/js-codec-base32"
   },
   "scripts": {
     "build": "babel --delete-dir-on-start --env-name production src -d lib",
