@@ -1,4 +1,4 @@
-import * as mod from '../../src/index.js';
+import * as mod from '#module';
 
 const _mod = mod.default ?? mod;
 

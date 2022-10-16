@@ -2,7 +2,7 @@ import test from 'ava';
 import * as ascii from '@codec-bytes/ascii';
 import {NotImplementedError} from '@failure-abstraction/error';
 
-import {decode, Base32DecodeError} from '../../src/index.js';
+import {decode, Base32DecodeError} from '#module';
 import {ValueError, CodecError} from './_fixtures.js';
 
 function success(t, bytes, options, expected) {
