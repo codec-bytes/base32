@@ -2,8 +2,8 @@ import test from 'ava';
 import * as ascii from '@codec-bytes/ascii';
 import {NotImplementedError} from '@failure-abstraction/error';
 
-import {decode, Base32DecodeError} from '#module';
 import {ValueError, CodecError} from './_fixtures.js';
+import {decode, Base32DecodeError} from '#module';
 
 function success(t, bytes, options, expected) {
 	const string = decode(bytes, options);
