@@ -1,16 +1,19 @@
 # Usage
 
-The code needs a ES2015+ polyfill to work, for example
-[regenerator-runtime/runtime](https://babeljs.io/docs/usage/polyfill).
+> :warning: Depending on your environment, the code may require
+> `regeneratorRuntime` to be defined, for instance by importing
+> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
+
+First, require the polyfill at the entry point of your application
 ```js
-await import( 'regenerator-runtime/runtime.js' ) ;
+await import('regenerator-runtime/runtime.js');
 // or
-import 'regenerator-runtime/runtime.js' ;
+import 'regenerator-runtime/runtime.js';
 ```
 
-Then
+Then, import the library where needed
 ```js
-const codecbase32 = await import( '@codec-bytes/base32' ) ;
+const {encode, decode} = await import('@codec-bytes/base32');
 // or
-import * as codecbase32 from '@codec-bytes/base32' ;
+import {encode, decode} from '@codec-bytes/base32';
 ```
