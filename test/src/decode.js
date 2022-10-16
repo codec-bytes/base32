@@ -1,10 +1,9 @@
 import test from 'ava' ;
-import ascii from '@aureooms/js-codec-ascii' ;
-import { ValueError , NotImplementedError } from '@aureooms/js-error' ;
-import { CodecError } from '@aureooms/js-codec' ;
-import { range } from '@aureooms/js-itertools' ;
+import * as ascii from '@codec-bytes/ascii' ;
+import { NotImplementedError } from '@failure-abstraction/error' ;
 
-import { decode , Base32DecodeError , byte2pair } from '../../src' ;
+import { ValueError, CodecError } from './_fixtures.js' ;
+import { decode , Base32DecodeError  } from '../../src' ;
 
 function success ( t , bytes , options , expected ) {
 

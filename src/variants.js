@@ -1,6 +1,6 @@
-import { enumerate } from '@aureooms/js-itertools' ;
+import { enumerate } from '@iterable-iterator/zip' ;
 
-import { object , reflect } from '@aureooms/js-mapping' ;
+import { toObject , inverse } from '@iterable-iterator/mapping' ;
 
 const variants = {
 
@@ -98,7 +98,7 @@ const variants = {
 
 for ( const variant in variants ) {
 	if ( variants[variant].index ) continue ;
-	variants[variant].index = object( reflect( enumerate( variants[variant].alphabet ) ) ) ;
+	variants[variant].index = toObject( inverse( enumerate( variants[variant].alphabet ) ) ) ;
 }
 
 variants['default'] = variants['base32'] = variants['RFC3548'] = variants['RFC4648'] ;

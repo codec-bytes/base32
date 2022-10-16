@@ -6,10 +6,10 @@ or [npm](https://github.com/npm/npm).
 
 ### jspm
 ```terminal
-jspm install npm:@aureooms/js-codec-base32
+jspm install npm:@codec-bytes/base32
 ```
 
 ### npm
 ```terminal
-npm install @aureooms/js-codec-base32 --save
+npm install @codec-bytes/base32 --save
 ```

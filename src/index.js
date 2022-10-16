@@ -17,11 +17,6 @@ import decode from './decode' ;
 import encode from './encode' ;
 import variants from './variants' ;
 
-export default {
-	decode ,
-	encode ,
-} ;
-
 export {
 	Base32DecodeError ,
 	Base32EncodeError ,
@@ -42,3 +37,6 @@ export {
 	encode ,
 	variants ,
 } ;
+
+export {ValueError} from '@failure-abstraction/error';
+export {CodecError} from '@codec-bytes/error';

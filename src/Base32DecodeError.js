@@ -1,4 +1,4 @@
-import { DecodeError } from '@aureooms/js-codec' ;
+import { DecodeError } from '@codec-bytes/error' ;
 
 export default class Base32DecodeError extends DecodeError {
 

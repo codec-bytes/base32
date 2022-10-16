@@ -1,8 +1,8 @@
 {
-  "name": "@aureooms/js-codec-base32",
+  "name": "@codec-bytes/base32",
   "description": "Base32 encoder/decoder for JavaScript",
   "version": "2.0.1",
-  "author": "aureooms",
+  "author": "make-github-pseudonymous-again",
   "ava": {
     "require": [
       "regenerator-runtime/runtime",
@@ -73,20 +73,22 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/make-github-pseudonymous-again/js-codec-base32/issues"
+    "url": "https://github.com/codec-bytes/base32/issues"
   },
   "dependencies": {
-    "@aureooms/js-codec": "^4.0.0",
-    "@aureooms/js-error": "^5.0.0",
-    "@aureooms/js-itertools": "^5.0.0",
-    "@aureooms/js-mapping": "^5.0.0"
+    "@codec-bytes/error": "^5.0.0",
+    "@failure-abstraction/error": "^6.0.1",
+    "@iterable-iterator/iter": "^1.0.1",
+    "@iterable-iterator/mapping": "^9.0.0",
+    "@iterable-iterator/next": "^2.0.1",
+    "@iterable-iterator/zip": "^1.0.1"
   },
   "devDependencies": {
-    "@aureooms/js-codec-ascii": "2.0.1",
     "@babel/cli": "7.13.10",
     "@babel/core": "7.13.10",
     "@babel/preset-env": "7.13.10",
     "@babel/register": "7.13.8",
+    "@codec-bytes/ascii": "^3.0.0",
     "ava": "3.15.0",
     "babel-plugin-transform-remove-console": "6.9.4",
     "babel-plugin-unassert": "3.0.1",
@@ -104,7 +106,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "https://make-github-pseudonymous-again.github.io/js-codec-base32",
+  "homepage": "https://codec-bytes.github.io/base32",
   "keywords": [
     "base32",
     "codec",
@@ -116,7 +118,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/make-github-pseudonymous-again/js-codec-base32"
+    "url": "https://github.com/codec-bytes/base32"
   },
   "scripts": {
     "build": "babel --delete-dir-on-start --env-name production src -d lib",

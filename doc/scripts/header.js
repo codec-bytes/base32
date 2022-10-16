@@ -13,14 +13,14 @@ domReady(function(){
 
 	var projectname = document.createElement('a');
 	projectname.classList.add('project-name');
-	projectname.text = 'aureooms/js-codec-base32';
+	projectname.text = 'codec-bytes/base32';
 	projectname.href = './index.html' ;
 
 	var header = document.getElementsByTagName('header')[0] ;
 	header.insertBefore(projectname,header.firstChild);
 
 	var testlink = document.querySelector('header > a[data-ice="testLink"]') ;
-	testlink.href = 'https://coveralls.io/github/make-github-pseudonymous-again/js-codec-base32' ;
+	testlink.href = 'https://coveralls.io/github/codec-bytes/base32' ;
 	testlink.target = '_BLANK' ;
 
 	var searchBox = document.querySelector('.search-box');

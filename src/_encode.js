@@ -1,6 +1,8 @@
-import { iter , next , StopIteration , enumerate } from '@aureooms/js-itertools' ;
-import { object , reflect } from '@aureooms/js-mapping' ;
-import { ValueError } from '@aureooms/js-error' ;
+import {iter} from '@iterable-iterator/iter';
+import {next, StopIteration} from '@iterable-iterator/next';
+import {enumerate} from '@iterable-iterator/zip';
+import { toObject , inverse } from '@iterable-iterator/mapping' ;
+import { ValueError } from '@failure-abstraction/error' ;
 
 import char8tobyte5 from './char8tobyte5' ;
 import char7tobyte4 from './char7tobyte4' ;
@@ -26,7 +28,7 @@ export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 
 	let start = 0 ;
 
-	const index = options.index || object( reflect( enumerate( options.alphabet ) ) ) ;
+	const index = options.index || toObject( inverse( enumerate( options.alphabet ) ) ) ;
 	const padding = options.padding ;
 
 	const it = iter(string) ;
