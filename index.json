@@ -1,0 +1,1571 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/Base32DecodeError.js",
+    "content": "import {DecodeError} from '@codec-bytes/error';\n\nexport default class Base32DecodeError extends DecodeError {\n\tconstructor(reason, object, position) {\n\t\tsuper('base32', reason, object, position);\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/Base32DecodeError.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Base32DecodeError",
+    "memberof": "src/Base32DecodeError.js",
+    "static": true,
+    "longname": "src/Base32DecodeError.js~Base32DecodeError",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/Base32DecodeError.js",
+    "importStyle": "Base32DecodeError",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "@codec-bytes/error~DecodeError"
+    ]
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Base32DecodeError.js~Base32DecodeError",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Base32DecodeError.js~Base32DecodeError#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "file",
+    "name": "src/Base32EncodeError.js",
+    "content": "import {EncodeError} from '@codec-bytes/error';\n\nexport default class Base32EncodeError extends EncodeError {\n\tconstructor(reason, object, position) {\n\t\tsuper('base32', reason, object, position);\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/Base32EncodeError.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 52,
+    "kind": "class",
+    "name": "Base32EncodeError",
+    "memberof": "src/Base32EncodeError.js",
+    "static": true,
+    "longname": "src/Base32EncodeError.js~Base32EncodeError",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/Base32EncodeError.js",
+    "importStyle": "Base32EncodeError",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "@codec-bytes/error~EncodeError"
+    ]
+  },
+  {
+    "__docId__": 53,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Base32EncodeError.js~Base32EncodeError",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Base32EncodeError.js~Base32EncodeError#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/DEFAULT_OPTIONS.js",
+    "content": "import variants from './variants.js';\n\nexport default variants.default;\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/DEFAULT_OPTIONS.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "src/_decode.js",
+    "content": "import {iter} from '@iterable-iterator/iter';\nimport {next, StopIteration} from '@iterable-iterator/next';\nimport {ValueError} from '@failure-abstraction/error';\n\nimport byte5tochar8 from './byte5tochar8.js';\nimport byte4tochar7 from './byte4tochar7.js';\nimport byte3tochar5 from './byte3tochar5.js';\nimport byte2tochar4 from './byte2tochar4.js';\nimport byte1tochar2 from './byte1tochar2.js';\n\nimport Base32DecodeError from './Base32DecodeError.js';\n\nimport variants from './variants.js';\nimport DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js';\n\nexport default function* _decode(bytes, options = DEFAULT_OPTIONS) {\n\tif (options.variant) {\n\t\tif (Object.prototype.hasOwnProperty.call(variants, options.variant)) {\n\t\t\toptions = variants[options.variant];\n\t\t} else {\n\t\t\tthrow new ValueError(`unknown Base32 variant ${options.variant}`);\n\t\t}\n\t}\n\n\tlet start = 0;\n\n\tconst {alphabet, padding} = options;\n\n\tconst it = iter(bytes);\n\n\twhile (true) {\n\t\tlet a;\n\t\tlet b;\n\t\tlet c;\n\t\tlet d;\n\t\tlet e;\n\n\t\ttry {\n\t\t\ta = next(it);\n\t\t} catch (error) {\n\t\t\tif (error instanceof StopIteration) break;\n\t\t\telse throw error;\n\t\t}\n\n\t\tif (a < 0x00 || a > 0xff) {\n\t\t\tconst reason = `byte out of range 0x00 <= ${a} <= 0xFF`;\n\t\t\tconst position = {start, end: start + 1};\n\t\t\tthrow new Base32DecodeError(reason, bytes, position);\n\t\t}\n\n\t\t++start;\n\n\t\ttry {\n\t\t\tb = next(it);\n\t\t} catch (error) {\n\t\t\tif (error instanceof StopIteration) {\n\t\t\t\tyield* byte1tochar2(alphabet, a);\n\t\t\t\tif (padding) {\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t}\n\n\t\t\t\tbreak;\n\t\t\t} else throw error;\n\t\t}\n\n\t\tif (b < 0x00 || b > 0xff) {\n\t\t\tconst reason = `byte out of range 0x00 <= ${b} <= 0xFF`;\n\t\t\tconst position = {start, end: start + 1};\n\t\t\tthrow new Base32DecodeError(reason, bytes, position);\n\t\t}\n\n\t\t++start;\n\n\t\ttry {\n\t\t\tc = next(it);\n\t\t} catch (error) {\n\t\t\tif (error instanceof StopIteration) {\n\t\t\t\tyield* byte2tochar4(alphabet, a, b);\n\t\t\t\tif (padding) {\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t}\n\n\t\t\t\tbreak;\n\t\t\t} else throw error;\n\t\t}\n\n\t\tif (c < 0x00 || c > 0xff) {\n\t\t\tconst reason = `byte out of range 0x00 <= ${c} <= 0xFF`;\n\t\t\tconst position = {start, end: start + 1};\n\t\t\tthrow new Base32DecodeError(reason, bytes, position);\n\t\t}\n\n\t\t++start;\n\n\t\ttry {\n\t\t\td = next(it);\n\t\t} catch (error) {\n\t\t\tif (error instanceof StopIteration) {\n\t\t\t\tyield* byte3tochar5(alphabet, a, b, c);\n\t\t\t\tif (padding) {\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t\tyield padding;\n\t\t\t\t}\n\n\t\t\t\tbreak;\n\t\t\t} else throw error;\n\t\t}\n\n\t\tif (d < 0x00 || d > 0xff) {\n\t\t\tconst reason = `byte out of range 0x00 <= ${d} <= 0xFF`;\n\t\t\tconst position = {start, end: start + 1};\n\t\t\tthrow new Base32DecodeError(reason, bytes, position);\n\t\t}\n\n\t\t++start;\n\n\t\ttry {\n\t\t\te = next(it);\n\t\t} catch (error) {\n\t\t\tif (error instanceof StopIteration) {\n\t\t\t\tyield* byte4tochar7(alphabet, a, b, c, d);\n\t\t\t\tif (padding) {\n\t\t\t\t\tyield padding;\n\t\t\t\t}\n\n\t\t\t\tbreak;\n\t\t\t} else throw error;\n\t\t}\n\n\t\tif (e < 0x00 || e > 0xff) {\n\t\t\tconst reason = `byte out of range 0x00 <= ${e} <= 0xFF`;\n\t\t\tconst position = {start, end: start + 1};\n\t\t\tthrow new Base32DecodeError(reason, bytes, position);\n\t\t}\n\n\t\tyield* byte5tochar8(alphabet, a, b, c, d, e);\n\n\t\t++start;\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/_decode.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "name": "_decode",
+    "memberof": "src/_decode.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/_decode.js~_decode",
+    "access": "private",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/_decode.js",
+    "importStyle": "_decode",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "params": [
+      {
+        "name": "bytes",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "*"
+        ],
+        "defaultRaw": "DEFAULT_OPTIONS",
+        "defaultValue": "DEFAULT_OPTIONS"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 57,
+    "kind": "file",
+    "name": "src/_encode.js",
+    "content": "import {iter} from '@iterable-iterator/iter';\nimport {next, StopIteration} from '@iterable-iterator/next';\nimport {enumerate} from '@iterable-iterator/zip';\nimport {toObject, inverse} from '@iterable-iterator/mapping';\nimport {ValueError} from '@failure-abstraction/error';\n\nimport char8tobyte5 from './char8tobyte5.js';\nimport char7tobyte4 from './char7tobyte4.js';\nimport char5tobyte3 from './char5tobyte3.js';\nimport char4tobyte2 from './char4tobyte2.js';\nimport char2tobyte1 from './char2tobyte1.js';\n\nimport Base32EncodeError from './Base32EncodeError.js';\n\nimport variants from './variants.js';\nimport DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js';\n\nexport default function* _encode(string, options = DEFAULT_OPTIONS) {\n\tif (options.variant) {\n\t\tif (Object.prototype.hasOwnProperty.call(variants, options.variant)) {\n\t\t\toptions = variants[options.variant];\n\t\t} else {\n\t\t\tthrow new ValueError(`unknown Base32 variant ${options.variant}`);\n\t\t}\n\t}\n\n\tlet start = 0;\n\n\tconst index = options.index || toObject(inverse(enumerate(options.alphabet)));\n\tconst padding = options.padding;\n\n\tconst it = iter(string);\n\n\twhile (true) {\n\t\tconst digits = [];\n\n\t\tlet stop = 0;\n\n\t\tdo {\n\t\t\ttry {\n\t\t\t\tdigits.push(next(it));\n\t\t\t} catch (error) {\n\t\t\t\tif (error instanceof StopIteration) break;\n\t\t\t\telse throw error;\n\t\t\t}\n\t\t} while (++stop < 8);\n\n\t\tif (stop === 0) break;\n\n\t\tif (padding) {\n\t\t\tstop = digits.indexOf(padding);\n\t\t\tstop = stop === -1 ? digits.length : stop;\n\t\t\tif (stop === 0) {\n\t\t\t\tconst reason = `padding at wrong position in ${digits.join('')}`;\n\t\t\t\tconst position = {start: start + stop, end: start + stop + 1};\n\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t\t} else if (stop === 2 || stop === 4 || stop === 5 || stop === 7) {\n\t\t\t\tfor (let i = stop + 1; i < digits.length; ++i) {\n\t\t\t\t\tif (digits[i] !== padding) {\n\t\t\t\t\t\tconst reason = `incorrect padding end in ${digits.join('')}`;\n\t\t\t\t\t\tconst position = {start: start + i, end: start + i + 1};\n\t\t\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tif (digits.length !== 8) {\n\t\t\t\t\tconst reason = `missing padding in ${digits.join('')}`;\n\t\t\t\t\tconst position = {start, end: start + digits.length};\n\t\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tconst mask = [0, 3, 0, 15, 1, 0, 7, 0];\n\n\t\tfor (let i = 0; i < stop; ++i) {\n\t\t\tconst digit = digits[i];\n\n\t\t\tif (!Object.prototype.hasOwnProperty.call(index, digit)) {\n\t\t\t\tconst reason = `not in alphabet ${digit}`;\n\t\t\t\tconst position = {start: start + i, end: start + i + 1};\n\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t\t}\n\n\t\t\t// A1 a2 a3 a4 a5 b1 b2 b3\n\t\t\t// b4 b5 c1 c2 c3 c4 c5 d1\n\t\t\t// d2 d3 d4 d5 e1 e2 e3 e4\n\t\t\t// e5 f1 f2 f3 f4 f5 g1 g2\n\t\t\t// g3 g4 g5 h1 h2 h3 h4 h5\n\t\t\telse if (i + 1 === stop && index[digit] & mask[i]) {\n\t\t\t\tconst reason = `trailing bits in ${digits\n\t\t\t\t\t.slice(0, i + 1)\n\t\t\t\t\t.join('')}, last digit should be ${\n\t\t\t\t\toptions.alphabet[index[digit] & ~mask[i]]\n\t\t\t\t}`;\n\t\t\t\tconst position = {start: start + i, end: start + i + 1};\n\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t\t}\n\t\t}\n\n\t\tconst [a, b, c, d, e, f, g, h] = digits;\n\t\tlet reason;\n\t\tlet position;\n\t\t// eslint-disable-next-line default-case\n\t\tswitch (stop) {\n\t\t\tcase 8:\n\t\t\t\tyield* char8tobyte5(index, a, b, c, d, e, f, g, h);\n\t\t\t\tstart += 8;\n\t\t\t\tcontinue;\n\t\t\tcase 7:\n\t\t\t\tyield* char7tobyte4(index, a, b, c, d, e, f, g);\n\t\t\t\tbreak;\n\t\t\tcase 6:\n\t\t\t\treason = `unterminated byte sequence ${a}${b}${c}${d}${e}${f}`;\n\t\t\t\tposition = {start, end: start + 6};\n\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t\tcase 5:\n\t\t\t\tyield* char5tobyte3(index, a, b, c, d, e);\n\t\t\t\tbreak;\n\t\t\tcase 4:\n\t\t\t\tyield* char4tobyte2(index, a, b, c, d);\n\t\t\t\tbreak;\n\t\t\tcase 3:\n\t\t\t\treason = `unterminated byte sequence ${a}${b}${c}`;\n\t\t\t\tposition = {start, end: start + 3};\n\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t\tcase 2:\n\t\t\t\tyield* char2tobyte1(index, a, b);\n\t\t\t\tbreak;\n\t\t\tcase 1:\n\t\t\t\treason = `unterminated byte sequence ${a}`;\n\t\t\t\tposition = {start, end: start + 1};\n\t\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t}\n\n\t\tif (padding) {\n\t\t\tlet extra;\n\n\t\t\ttry {\n\t\t\t\textra = next(it);\n\t\t\t} catch (error) {\n\t\t\t\tif (error instanceof StopIteration) break;\n\t\t\t\telse throw error;\n\t\t\t}\n\n\t\t\treason = `input continues after padding ${extra}`;\n\t\t\tposition = {start: start + 8, end: start + 9};\n\n\t\t\tthrow new Base32EncodeError(reason, string, position);\n\t\t} else break;\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/_encode.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "_encode",
+    "memberof": "src/_encode.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/_encode.js~_encode",
+    "access": "private",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/_encode.js",
+    "importStyle": "_encode",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "params": [
+      {
+        "name": "string",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "*"
+        ],
+        "defaultRaw": "DEFAULT_OPTIONS",
+        "defaultValue": "DEFAULT_OPTIONS"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/byte1tochar2.js",
+    "content": "export default function* byte1tochar2(alphabet, a) {\n\t// A1 a2 a3 a4 a5 | a6 a7 a8 0 0\n\tyield alphabet[a >> 3];\n\tyield alphabet[31 & (a << 2)];\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/byte1tochar2.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "name": "byte1tochar2",
+    "memberof": "src/byte1tochar2.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/byte1tochar2.js~byte1tochar2",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/byte1tochar2.js",
+    "importStyle": "byte1tochar2",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "alphabet",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "name": "src/byte2tochar4.js",
+    "content": "export default function* byte2tochar4(alphabet, a, b) {\n\t// A1 a2 a3 a4 a5 | a6 a7 a8 b1 b2 | b3 b4 b5 b6 b7 | b8 0 0 0 0\n\tyield alphabet[a >> 3];\n\tyield alphabet[(31 & (a << 2)) | (b >> 6)];\n\tyield alphabet[31 & (b >> 1)];\n\tyield alphabet[31 & (b << 4)];\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/byte2tochar4.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "function",
+    "name": "byte2tochar4",
+    "memberof": "src/byte2tochar4.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/byte2tochar4.js~byte2tochar4",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/byte2tochar4.js",
+    "importStyle": "byte2tochar4",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "alphabet",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 63,
+    "kind": "file",
+    "name": "src/byte3tochar5.js",
+    "content": "export default function* byte3tochar5(alphabet, a, b, c) {\n\t// A1 a2 a3 a4 a5 | a6 a7 a8 b1 b2 | b3 b4 b5 b6 b7 | b8 c1 c2 c3 c4 | c5 c6 c7 c8 0\n\tyield alphabet[a >> 3];\n\tyield alphabet[(31 & (a << 2)) | (b >> 6)];\n\tyield alphabet[31 & (b >> 1)];\n\tyield alphabet[(31 & (b << 4)) | (c >> 4)];\n\tyield alphabet[31 & (c << 1)];\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/byte3tochar5.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "byte3tochar5",
+    "memberof": "src/byte3tochar5.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/byte3tochar5.js~byte3tochar5",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/byte3tochar5.js",
+    "importStyle": "byte3tochar5",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "alphabet",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "c",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "name": "src/byte4tochar7.js",
+    "content": "export default function* byte4tochar7(alphabet, a, b, c, d) {\n\t// A1 a2 a3 a4 a5 | a6 a7 a8 b1 b2 | b3 b4 b5 b6 b7 | b8 c1 c2 c3 c4 | c5 c6 c7 c8 d1 | d2 d3 d4 d5 d6 | d7 d8 0 0 0\n\tyield alphabet[a >> 3];\n\tyield alphabet[(31 & (a << 2)) | (b >> 6)];\n\tyield alphabet[31 & (b >> 1)];\n\tyield alphabet[(31 & (b << 4)) | (c >> 4)];\n\tyield alphabet[(31 & (c << 1)) | (d >> 7)];\n\tyield alphabet[31 & (d >> 2)];\n\tyield alphabet[31 & (d << 3)];\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/byte4tochar7.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "name": "byte4tochar7",
+    "memberof": "src/byte4tochar7.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/byte4tochar7.js~byte4tochar7",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/byte4tochar7.js",
+    "importStyle": "byte4tochar7",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "alphabet",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "c",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "d",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 67,
+    "kind": "file",
+    "name": "src/byte5tochar8.js",
+    "content": "export default function* byte5tochar8(alphabet, a, b, c, d, e) {\n\t// A1 a2 a3 a4 a5 | a6 a7 a8 b1 b2 | b3 b4 b5 b6 b7 | b8 c1 c2 c3 c4 | c5 c6 c7 c8 d1 | d2 d3 d4 d5 d6 | d7 d8 e1 e2 e3 | e4 e5 e6 e7 e8\n\tyield alphabet[a >> 3];\n\tyield alphabet[(31 & (a << 2)) | (b >> 6)];\n\tyield alphabet[31 & (b >> 1)];\n\tyield alphabet[(31 & (b << 4)) | (c >> 4)];\n\tyield alphabet[(31 & (c << 1)) | (d >> 7)];\n\tyield alphabet[31 & (d >> 2)];\n\tyield alphabet[(31 & (d << 3)) | (e >> 5)];\n\tyield alphabet[31 & e];\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/byte5tochar8.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 68,
+    "kind": "function",
+    "name": "byte5tochar8",
+    "memberof": "src/byte5tochar8.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/byte5tochar8.js~byte5tochar8",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/byte5tochar8.js",
+    "importStyle": "byte5tochar8",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "alphabet",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "c",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "d",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 69,
+    "kind": "file",
+    "name": "src/char2tobyte1.js",
+    "content": "export default function* char2tobyte1(index, a, b) {\n\t// A1 a2 a3 a4 a5 b1 b2 b3\n\tyield (index[a] << 3) | (index[b] >> 2);\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/char2tobyte1.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 70,
+    "kind": "function",
+    "name": "char2tobyte1",
+    "memberof": "src/char2tobyte1.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/char2tobyte1.js~char2tobyte1",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/char2tobyte1.js",
+    "importStyle": "char2tobyte1",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "index",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 71,
+    "kind": "file",
+    "name": "src/char4tobyte2.js",
+    "content": "export default function* char4tobyte2(index, a, b, c, d) {\n\t// A1 a2 a3 a4 a5 b1 b2 b3\n\t// b4 b5 c1 c2 c3 c4 c5 d1\n\tyield (index[a] << 3) | (index[b] >> 2);\n\tyield (0xff & (index[b] << 6)) | (index[c] << 1) | (index[d] >> 4);\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/char4tobyte2.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 72,
+    "kind": "function",
+    "name": "char4tobyte2",
+    "memberof": "src/char4tobyte2.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/char4tobyte2.js~char4tobyte2",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/char4tobyte2.js",
+    "importStyle": "char4tobyte2",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "index",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "c",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "d",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "name": "src/char5tobyte3.js",
+    "content": "export default function* char5tobyte3(index, a, b, c, d, e) {\n\t// A1 a2 a3 a4 a5 b1 b2 b3\n\t// b4 b5 c1 c2 c3 c4 c5 d1\n\t// d2 d3 d4 d5 e1 e2 e3 e4\n\tyield (index[a] << 3) | (index[b] >> 2);\n\tyield (0xff & (index[b] << 6)) | (index[c] << 1) | (index[d] >> 4);\n\tyield (0xff & (index[d] << 4)) | (index[e] >> 1);\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/char5tobyte3.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "function",
+    "name": "char5tobyte3",
+    "memberof": "src/char5tobyte3.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/char5tobyte3.js~char5tobyte3",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/char5tobyte3.js",
+    "importStyle": "char5tobyte3",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "index",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "c",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "d",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "name": "src/char7tobyte4.js",
+    "content": "export default function* char7tobyte4(index, a, b, c, d, e, f, g) {\n\t// A1 a2 a3 a4 a5 b1 b2 b3\n\t// b4 b5 c1 c2 c3 c4 c5 d1\n\t// d2 d3 d4 d5 e1 e2 e3 e4\n\t// e5 f1 f2 f3 f4 f5 g1 g2\n\tyield (index[a] << 3) | (index[b] >> 2);\n\tyield (0xff & (index[b] << 6)) | (index[c] << 1) | (index[d] >> 4);\n\tyield (0xff & (index[d] << 4)) | (index[e] >> 1);\n\tyield (0xff & (index[e] << 7)) | (index[f] << 2) | (index[g] >> 3);\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/char7tobyte4.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "function",
+    "name": "char7tobyte4",
+    "memberof": "src/char7tobyte4.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/char7tobyte4.js~char7tobyte4",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/char7tobyte4.js",
+    "importStyle": "char7tobyte4",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "index",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "c",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "d",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "f",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "g",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "name": "src/char8tobyte5.js",
+    "content": "export default function* char8tobyte5(index, a, b, c, d, e, f, g, h) {\n\t// A1 a2 a3 a4 a5 b1 b2 b3\n\t// b4 b5 c1 c2 c3 c4 c5 d1\n\t// d2 d3 d4 d5 e1 e2 e3 e4\n\t// e5 f1 f2 f3 f4 f5 g1 g2\n\t// g3 g4 g5 h1 h2 h3 h4 h5\n\tyield (index[a] << 3) | (index[b] >> 2);\n\tyield (0xff & (index[b] << 6)) | (index[c] << 1) | (index[d] >> 4);\n\tyield (0xff & (index[d] << 4)) | (index[e] >> 1);\n\tyield (0xff & (index[e] << 7)) | (index[f] << 2) | (index[g] >> 3);\n\tyield (0xff & (index[g] << 5)) | index[h];\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/char8tobyte5.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 78,
+    "kind": "function",
+    "name": "char8tobyte5",
+    "memberof": "src/char8tobyte5.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/char8tobyte5.js~char8tobyte5",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/char8tobyte5.js",
+    "importStyle": "char8tobyte5",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "index",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "c",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "d",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "f",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "g",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "h",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/decode.js",
+    "content": "import _decode from './_decode.js';\nimport DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js';\n\nexport default function decode(bytes, options = DEFAULT_OPTIONS) {\n\treturn [..._decode(bytes, options)].join('');\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/decode.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "function",
+    "name": "decode",
+    "memberof": "src/decode.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/decode.js~decode",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/decode.js",
+    "importStyle": "decode",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "bytes",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "*"
+        ],
+        "defaultRaw": "DEFAULT_OPTIONS",
+        "defaultValue": "DEFAULT_OPTIONS"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "file",
+    "name": "src/encode.js",
+    "content": "import _encode from './_encode.js';\nimport DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js';\n\nexport default function encode(bytes, options = DEFAULT_OPTIONS) {\n\treturn [..._encode(bytes, options)];\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/encode.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 82,
+    "kind": "function",
+    "name": "encode",
+    "memberof": "src/encode.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/encode.js~encode",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/encode.js",
+    "importStyle": "encode",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "bytes",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "types": [
+          "*"
+        ],
+        "defaultRaw": "DEFAULT_OPTIONS",
+        "defaultValue": "DEFAULT_OPTIONS"
+      }
+    ],
+    "return": {
+      "types": [
+        "undefined[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "export {ValueError} from '@failure-abstraction/error';\nexport {CodecError} from '@codec-bytes/error';\nexport {default as Base32DecodeError} from './Base32DecodeError.js';\nexport {default as DEFAULT_OPTIONS} from './DEFAULT_OPTIONS.js';\nexport {default as Base32EncodeError} from './Base32EncodeError.js';\nexport {default as _encode} from './_encode.js';\nexport {default as _decode} from './_decode.js';\nexport {default as byte2tochar4} from './byte2tochar4.js';\nexport {default as byte1tochar2} from './byte1tochar2.js';\nexport {default as byte4tochar7} from './byte4tochar7.js';\nexport {default as byte3tochar5} from './byte3tochar5.js';\nexport {default as char2tobyte1} from './char2tobyte1.js';\nexport {default as byte5tochar8} from './byte5tochar8.js';\nexport {default as char5tobyte3} from './char5tobyte3.js';\nexport {default as char4tobyte2} from './char4tobyte2.js';\nexport {default as char8tobyte5} from './char8tobyte5.js';\nexport {default as char7tobyte4} from './char7tobyte4.js';\nexport {default as encode} from './encode.js';\nexport {default as decode} from './decode.js';\nexport {default as variants} from './variants.js';\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "src/variants.js",
+    "content": "import {enumerate} from '@iterable-iterator/zip';\n\nimport {toObject, inverse} from '@iterable-iterator/mapping';\n\nconst variants = {\n\t// Standard ``base32''\n\tRFC4648: {\n\t\talphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567',\n\t\tpadding: '=',\n\t},\n\n\t// Also RFC4648 (used by NSEC3)\n\t// ``encoded data maintains its sort order when the encoded data is compared bit-wise''\n\tbase32hex: {\n\t\talphabet: '0123456789ABCDEFGHIJKLMNOPQRSTUV',\n\t\tpadding: '=',\n\t},\n\n\t// ``easier for human use and more compact''\n\t'z-base-32': {\n\t\talphabet: 'ybndrfg8ejkmcpqxot1uwisza345h769',\n\t\tpadding: false,\n\t},\n\n\t// It excludes the letters I, L, and O to avoid confusion with digits. It\n\t// also excludes the letter U to reduce the likelihood of accidental\n\t// obscenity.\n\t// See http://www.crockford.com/wrmg/base32.html\n\tcrockford: {\n\t\talphabet: '0123456789ABCDEFGHJKMNPQRSTVWXYZ',\n\t\tpadding: false,\n\t\tindex: {\n\t\t\t0: 0,\n\t\t\to: 0,\n\t\t\tO: 0,\n\t\t\t1: 1,\n\t\t\ti: 1,\n\t\t\tI: 1,\n\t\t\tl: 1,\n\t\t\tL: 1,\n\t\t\t2: 2,\n\t\t\t3: 3,\n\t\t\t4: 4,\n\t\t\t5: 5,\n\t\t\t6: 6,\n\t\t\t7: 7,\n\t\t\t8: 8,\n\t\t\t9: 9,\n\t\t\ta: 10,\n\t\t\tA: 10,\n\t\t\tb: 11,\n\t\t\tB: 11,\n\t\t\tc: 12,\n\t\t\tC: 12,\n\t\t\td: 13,\n\t\t\tD: 13,\n\t\t\te: 14,\n\t\t\tE: 14,\n\t\t\tf: 15,\n\t\t\tF: 15,\n\t\t\tg: 16,\n\t\t\tG: 16,\n\t\t\th: 17,\n\t\t\tH: 17,\n\t\t\tj: 18,\n\t\t\tJ: 18,\n\t\t\tk: 19,\n\t\t\tK: 19,\n\t\t\tm: 20,\n\t\t\tM: 20,\n\t\t\tn: 21,\n\t\t\tN: 21,\n\t\t\tp: 22,\n\t\t\tP: 22,\n\t\t\tq: 23,\n\t\t\tQ: 23,\n\t\t\tr: 24,\n\t\t\tR: 24,\n\t\t\ts: 25,\n\t\t\tS: 25,\n\t\t\tt: 26,\n\t\t\tT: 26,\n\t\t\tv: 27,\n\t\t\tV: 27,\n\t\t\tw: 28,\n\t\t\tW: 28,\n\t\t\tx: 29,\n\t\t\tX: 29,\n\t\t\ty: 30,\n\t\t\tY: 30,\n\t\t\tz: 31,\n\t\t\tZ: 31,\n\t\t},\n\t},\n};\n\nfor (const variant in variants) {\n\tif (variants[variant].index) continue;\n\tvariants[variant].index = toObject(\n\t\tinverse(enumerate(variants[variant].alphabet)),\n\t);\n}\n\n// eslint-disable-next-line no-multi-assign\nvariants.default = variants.base32 = variants.RFC3548 = variants.RFC4648;\nvariants.RFC2938 = variants.base32hex;\nvariants.Crockford = variants.crockford;\n\nexport default variants;\n",
+    "static": true,
+    "longname": "/home/runner/work/base32/base32/src/variants.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "variable",
+    "name": "variants",
+    "memberof": "src/variants.js",
+    "static": true,
+    "longname": "src/variants.js~variants",
+    "access": "public",
+    "export": true,
+    "importPath": "@codec-bytes/base32/src/variants.js",
+    "importStyle": "variants",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"RFC4648\": *, \"base32hex\": *, \"z-base-32\": *, \"crockford\": *}"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": ":fax:\n[@codec-bytes/base32](https://codec-bytes.github.io/base32)\n==\n\nBase32 encoder/decoder for JavaScript.\nSee [docs](https://codec-bytes.github.io/base32/index.html).\nParent is [@codec-bytes/about](https://github.com/codec-bytes/about).\n\n```js\nimport * as ascii from '@codec-bytes/ascii';\nimport * as base32 from '@codec-bytes/base32';\nlet bytes = ascii.encode('Hello!');\nbase32.decode(bytes); // 'JBSWY3DPEE======'\nbase32.decode(bytes, {variant: 'base32hex'}); // '91IMOR3F44======'\nbase32.decode(bytes, {variant: 'z-base-32'}); // 'jb1sa5dxrr'\nbase32.decode(bytes, {variant: 'crockford'}); // '91JPRV3F44'\nbase32.decode(bytes, {alphabet: 'BCDEFGHIJKLMNOPQRSTUVWXYZ234567A', padding: '.'}); // 'KCTXZ4EQFF......'\n```\n\n[![License](https://img.shields.io/github/license/codec-bytes/base32.svg)](https://raw.githubusercontent.com/codec-bytes/base32/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@codec-bytes/base32.svg)](https://www.npmjs.org/package/@codec-bytes/base32)\n[![Tests](https://img.shields.io/github/workflow/status/codec-bytes/base32/ci?event=push&label=tests)](https://github.com/codec-bytes/base32/actions/workflows/ci.yml?query=branch:main)\n[![Dependencies](https://img.shields.io/librariesio/github/codec-bytes/base32.svg)](https://github.com/codec-bytes/base32/network/dependencies)\n[![GitHub issues](https://img.shields.io/github/issues/codec-bytes/base32.svg)](https://github.com/codec-bytes/base32/issues)\n[![Downloads](https://img.shields.io/npm/dm/@codec-bytes/base32.svg)](https://www.npmjs.org/package/@codec-bytes/base32)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/codec-bytes/base32.svg)](https://codeclimate.com/github/codec-bytes/base32/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/codec-bytes/base32.svg)](https://codeclimate.com/github/codec-bytes/base32/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/codec-bytes/base32/main.svg)](https://codecov.io/gh/codec-bytes/base32)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/codec-bytes/base32.svg)](https://codeclimate.com/github/codec-bytes/base32/trends/technical_debt)\n[![Documentation](https://codec-bytes.github.io/base32/badge.svg)](https://codec-bytes.github.io/base32/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@codec-bytes/base32)](https://bundlephobia.com/result?p=@codec-bytes/base32)\n",
+    "longname": "/home/runner/work/base32/base32/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@codec-bytes/base32\",\n  \"description\": \"Base32 encoder/decoder for JavaScript\",\n  \"version\": \"3.0.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"make-github-pseudonymous-again\",\n  \"homepage\": \"https://codec-bytes.github.io/base32\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/codec-bytes/base32\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/codec-bytes/base32/issues\"\n  },\n  \"keywords\": [\n    \"base32\",\n    \"codec\",\n    \"decode\",\n    \"encode\",\n    \"strings\"\n  ],\n  \"sideEffects\": false,\n  \"type\": \"module\",\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.cjs\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.cjs\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"publishConfig\": {\n    \"access\": \"public\"\n  },\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"npm run test:src\",\n    \"test-cmd\": \"NODE_LOADER_CONFIG=test/loader/config.js ava\",\n    \"test:cjs\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.json npm run test-cmd\",\n    \"test:dist\": \"npm run test:modern && npm run test:module && npm run test:cjs\",\n    \"test:modern\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.modern.json npm run test-cmd\",\n    \"test:module\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.module.json npm run test-cmd\",\n    \"test:src\": \"IMPORT_MAP_PATH=test/import-maps/src/index.json npm run test-cmd\"\n  },\n  \"dependencies\": {\n    \"@codec-bytes/error\": \"^5.0.1\",\n    \"@failure-abstraction/error\": \"^6.0.1\",\n    \"@iterable-iterator/iter\": \"^1.0.1\",\n    \"@iterable-iterator/mapping\": \"^9.0.0\",\n    \"@iterable-iterator/next\": \"^2.0.1\",\n    \"@iterable-iterator/zip\": \"^1.0.1\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"7.19.3\",\n    \"@babel/plugin-transform-destructuring\": \"7.19.4\",\n    \"@babel/plugin-transform-for-of\": \"7.18.8\",\n    \"@babel/preset-env\": \"7.19.4\",\n    \"@codec-bytes/ascii\": \"3.0.0\",\n    \"@commitlint/cli\": \"17.1.2\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"@node-loader/babel\": \"2.0.1\",\n    \"@node-loader/core\": \"2.0.0\",\n    \"@node-loader/import-maps\": \"1.1.0\",\n    \"ava\": \"4.3.3\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.2.0\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.12.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"8.0.1\",\n    \"lint-staged\": \"13.0.3\",\n    \"microbundle\": \"0.15.1\",\n    \"np\": \"7.6.2\",\n    \"pinst\": \"3.0.0\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.10\",\n    \"xo\": \"0.52.4\"\n  },\n  \"ava\": {\n    \"require\": [\n      \"regenerator-runtime/runtime\"\n    ],\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"timeout\": \"1m\",\n    \"nodeArguments\": [\n      \"--experimental-loader=@node-loader/core\"\n    ]\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"@babel/plugin-transform-destructuring\",\n          \"@babel/plugin-transform-for-of\",\n          \"babel-plugin-unassert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-node-protocol\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      },\n      {\n        \"files\": [\n          \"src/**\"\n        ],\n        \"rules\": {\n          \"no-bitwise\": \"off\"\n        }\n      }\n    ]\n  }\n}\n",
+    "longname": "/home/runner/work/base32/base32/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "globalIndex": false,
+    "content": null,
+    "longname": "",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/base32/base32/doc/manual/overview.md",
+    "name": "./doc/manual/overview.md",
+    "content": "# Overview\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/base32/base32/doc/manual/installation.md",
+    "name": "./doc/manual/installation.md",
+    "content": "# Installation\n\nCan be managed using\n[yarn](https://yarnpkg.com/en/docs),\n[npm](https://docs.npmjs.com),\nor [jspm](https://jspm.org/docs).\n\n\n### yarn\n```terminal\nyarn add @codec-bytes/base32\n```\n\n### npm\n```terminal\nnpm install @codec-bytes/base32 --save\n```\n\n### jspm\n```terminal\njspm install npm:@codec-bytes/base32\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/base32/base32/doc/manual/usage.md",
+    "name": "./doc/manual/usage.md",
+    "content": "# Usage\n\n> :warning: Depending on your environment, the code may require\n> `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\nFirst, require the polyfill at the entry point of your application\n```js\nawait import('regenerator-runtime/runtime.js');\n// or\nimport 'regenerator-runtime/runtime.js';\n```\n\nThen, import the library where needed\n```js\nconst {encode, decode} = await import('@codec-bytes/base32');\n// or\nimport {encode, decode} from '@codec-bytes/base32';\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/base32/base32/doc/manual/example.md",
+    "name": "./doc/manual/example.md",
+    "content": "# Examples\n\n> More examples in [the test files](https://github.com/codec-bytes/base32/tree/main/test/src).\n",
+    "static": true,
+    "access": "public"
+  }
+]

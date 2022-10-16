@@ -3,16 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/_decode.js | @aureooms/js-codec-base32 API Document</title>
+  <title data-ice="title">src/_decode.js | @codec-bytes/base32</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
-  
-  
   <script src="script/manual.js"></script>
-<script data-ice="userScript" src="user/script/0-header.js"></script>
-<link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="Base32 encoder/decoder for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@codec-bytes/base32"><meta property="twitter:description" content="Base32 encoder/decoder for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -20,8 +16,7 @@
   <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
-  <a href="test.html" data-ice="testLink">Test</a>
-  <a data-ice="repoURL" href="https://github.com/aureooms/js-codec-base32" class="repo-url-github">Repository</a>
+  
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -29,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/codec-bytes/base32"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -56,62 +51,62 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/_decode.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { iter , next , StopIteration } from &apos;@aureooms/js-itertools&apos; ;
-import { ValueError } from &apos;@aureooms/js-error&apos; ;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {iter} from &apos;@iterable-iterator/iter&apos;;
+import {next, StopIteration} from &apos;@iterable-iterator/next&apos;;
+import {ValueError} from &apos;@failure-abstraction/error&apos;;
 
-import byte5tochar8 from &apos;./byte5tochar8&apos; ;
-import byte4tochar7 from &apos;./byte4tochar7&apos; ;
-import byte3tochar5 from &apos;./byte3tochar5&apos; ;
-import byte2tochar4 from &apos;./byte2tochar4&apos; ;
-import byte1tochar2 from &apos;./byte1tochar2&apos; ;
+import byte5tochar8 from &apos;./byte5tochar8.js&apos;;
+import byte4tochar7 from &apos;./byte4tochar7.js&apos;;
+import byte3tochar5 from &apos;./byte3tochar5.js&apos;;
+import byte2tochar4 from &apos;./byte2tochar4.js&apos;;
+import byte1tochar2 from &apos;./byte1tochar2.js&apos;;
 
-import Base32DecodeError from &apos;./Base32DecodeError&apos; ;
+import Base32DecodeError from &apos;./Base32DecodeError.js&apos;;
 
-import variants from &apos;./variants&apos; ;
-import DEFAULT_OPTIONS from &apos;./DEFAULT_OPTIONS&apos; ;
+import variants from &apos;./variants.js&apos;;
+import DEFAULT_OPTIONS from &apos;./DEFAULT_OPTIONS.js&apos;;
 
-export default function* _decode ( bytes , options = DEFAULT_OPTIONS ) {
-
-	if ( options.variant ) {
-		if ( variants.hasOwnProperty(options.variant) ) {
-			options = variants[options.variant] ;
-		}
-		else {
-			throw new ValueError( `unknown Base32 variant ${options.variant}` ) ;
+export default function* _decode(bytes, options = DEFAULT_OPTIONS) {
+	if (options.variant) {
+		if (Object.prototype.hasOwnProperty.call(variants, options.variant)) {
+			options = variants[options.variant];
+		} else {
+			throw new ValueError(`unknown Base32 variant ${options.variant}`);
 		}
 	}
 
-	let start = 0 ;
+	let start = 0;
 
-	const { alphabet , padding } = options ;
+	const {alphabet, padding} = options;
 
-	const it = iter(bytes) ;
+	const it = iter(bytes);
 
-	while ( true ) {
-
-		let a, b, c, d, e;
+	while (true) {
+		let a;
+		let b;
+		let c;
+		let d;
+		let e;
 
 		try {
-			a = next( it ) ;
-		}
-		catch ( err ) {
-			if ( err instanceof StopIteration ) break ;
-			else throw err ;
+			a = next(it);
+		} catch (error) {
+			if (error instanceof StopIteration) break;
+			else throw error;
 		}
 
-		if ( a &lt; 0x00 || a &gt; 0xFF ) {
-			const reason = `byte out of range 0x00 &lt;= ${a} &lt;= 0xFF` ;
-			const position = { start : start , end : start + 1 } ;
-			throw new Base32DecodeError( reason , bytes , position ) ;
+		if (a &lt; 0x00 || a &gt; 0xff) {
+			const reason = `byte out of range 0x00 &lt;= ${a} &lt;= 0xFF`;
+			const position = {start, end: start + 1};
+			throw new Base32DecodeError(reason, bytes, position);
 		}
 
 		++start;
 
 		try {
-			b = next( it ) ;
-		}
-		catch ( err ) {
-			if ( err instanceof StopIteration ) {
+			b = next(it);
+		} catch (error) {
+			if (error instanceof StopIteration) {
 				yield* byte1tochar2(alphabet, a);
 				if (padding) {
 					yield padding;
@@ -121,24 +116,23 @@ export default function* _decode ( bytes , options = DEFAULT_OPTIONS ) {
 					yield padding;
 					yield padding;
 				}
+
 				break;
-			}
-			else throw err ;
+			} else throw error;
 		}
 
-		if ( b &lt; 0x00 || b &gt; 0xFF ) {
-			const reason = `byte out of range 0x00 &lt;= ${b} &lt;= 0xFF` ;
-			const position = { start : start , end : start + 1 } ;
-			throw new Base32DecodeError( reason , bytes , position ) ;
+		if (b &lt; 0x00 || b &gt; 0xff) {
+			const reason = `byte out of range 0x00 &lt;= ${b} &lt;= 0xFF`;
+			const position = {start, end: start + 1};
+			throw new Base32DecodeError(reason, bytes, position);
 		}
 
 		++start;
 
 		try {
-			c = next( it ) ;
-		}
-		catch ( err ) {
-			if ( err instanceof StopIteration ) {
+			c = next(it);
+		} catch (error) {
+			if (error instanceof StopIteration) {
 				yield* byte2tochar4(alphabet, a, b);
 				if (padding) {
 					yield padding;
@@ -146,76 +140,72 @@ export default function* _decode ( bytes , options = DEFAULT_OPTIONS ) {
 					yield padding;
 					yield padding;
 				}
+
 				break;
-			}
-			else throw err ;
+			} else throw error;
 		}
 
-		if ( c &lt; 0x00 || c &gt; 0xFF ) {
-			const reason = `byte out of range 0x00 &lt;= ${c} &lt;= 0xFF` ;
-			const position = { start : start , end : start + 1 } ;
-			throw new Base32DecodeError( reason , bytes , position ) ;
+		if (c &lt; 0x00 || c &gt; 0xff) {
+			const reason = `byte out of range 0x00 &lt;= ${c} &lt;= 0xFF`;
+			const position = {start, end: start + 1};
+			throw new Base32DecodeError(reason, bytes, position);
 		}
 
 		++start;
 
 		try {
-			d = next( it ) ;
-		}
-		catch ( err ) {
-			if ( err instanceof StopIteration ) {
+			d = next(it);
+		} catch (error) {
+			if (error instanceof StopIteration) {
 				yield* byte3tochar5(alphabet, a, b, c);
 				if (padding) {
 					yield padding;
 					yield padding;
 					yield padding;
 				}
+
 				break;
-			}
-			else throw err ;
+			} else throw error;
 		}
 
-		if ( d &lt; 0x00 || d &gt; 0xFF ) {
-			const reason = `byte out of range 0x00 &lt;= ${d} &lt;= 0xFF` ;
-			const position = { start : start , end : start + 1 } ;
-			throw new Base32DecodeError( reason , bytes , position ) ;
+		if (d &lt; 0x00 || d &gt; 0xff) {
+			const reason = `byte out of range 0x00 &lt;= ${d} &lt;= 0xFF`;
+			const position = {start, end: start + 1};
+			throw new Base32DecodeError(reason, bytes, position);
 		}
 
 		++start;
 
 		try {
-			e = next( it ) ;
-		}
-		catch ( err ) {
-			if ( err instanceof StopIteration ) {
+			e = next(it);
+		} catch (error) {
+			if (error instanceof StopIteration) {
 				yield* byte4tochar7(alphabet, a, b, c, d);
 				if (padding) {
 					yield padding;
 				}
+
 				break;
-			}
-			else throw err ;
+			} else throw error;
 		}
 
-		if ( e &lt; 0x00 || e &gt; 0xFF ) {
-			const reason = `byte out of range 0x00 &lt;= ${e} &lt;= 0xFF` ;
-			const position = { start : start , end : start + 1 } ;
-			throw new Base32DecodeError( reason , bytes , position ) ;
+		if (e &lt; 0x00 || e &gt; 0xff) {
+			const reason = `byte out of range 0x00 &lt;= ${e} &lt;= 0xFF`;
+			const position = {start, end: start + 1};
+			throw new Base32DecodeError(reason, bytes, position);
 		}
 
 		yield* byte5tochar8(alphabet, a, b, c, d, e);
 
 		++start;
-
 	}
-
 }
 </code></pre>
 
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>

@@ -3,16 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/_encode.js | @aureooms/js-codec-base32 API Document</title>
+  <title data-ice="title">src/_encode.js | @codec-bytes/base32</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
-  
-  
   <script src="script/manual.js"></script>
-<script data-ice="userScript" src="user/script/0-header.js"></script>
-<link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="Base32 encoder/decoder for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@codec-bytes/base32"><meta property="twitter:description" content="Base32 encoder/decoder for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -20,8 +16,7 @@
   <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
-  <a href="test.html" data-ice="testLink">Test</a>
-  <a data-ice="repoURL" href="https://github.com/aureooms/js-codec-base32" class="repo-url-github">Repository</a>
+  
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -29,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/codec-bytes/base32"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -56,175 +51,164 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/_encode.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { iter , next , StopIteration , enumerate } from &apos;@aureooms/js-itertools&apos; ;
-import { object , reflect } from &apos;@aureooms/js-mapping&apos; ;
-import { ValueError } from &apos;@aureooms/js-error&apos; ;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {iter} from &apos;@iterable-iterator/iter&apos;;
+import {next, StopIteration} from &apos;@iterable-iterator/next&apos;;
+import {enumerate} from &apos;@iterable-iterator/zip&apos;;
+import {toObject, inverse} from &apos;@iterable-iterator/mapping&apos;;
+import {ValueError} from &apos;@failure-abstraction/error&apos;;
 
-import char8tobyte5 from &apos;./char8tobyte5&apos; ;
-import char7tobyte4 from &apos;./char7tobyte4&apos; ;
-import char5tobyte3 from &apos;./char5tobyte3&apos; ;
-import char4tobyte2 from &apos;./char4tobyte2&apos; ;
-import char2tobyte1 from &apos;./char2tobyte1&apos; ;
+import char8tobyte5 from &apos;./char8tobyte5.js&apos;;
+import char7tobyte4 from &apos;./char7tobyte4.js&apos;;
+import char5tobyte3 from &apos;./char5tobyte3.js&apos;;
+import char4tobyte2 from &apos;./char4tobyte2.js&apos;;
+import char2tobyte1 from &apos;./char2tobyte1.js&apos;;
 
-import Base32EncodeError from &apos;./Base32EncodeError&apos; ;
+import Base32EncodeError from &apos;./Base32EncodeError.js&apos;;
 
-import variants from &apos;./variants&apos; ;
-import DEFAULT_OPTIONS from &apos;./DEFAULT_OPTIONS&apos; ;
+import variants from &apos;./variants.js&apos;;
+import DEFAULT_OPTIONS from &apos;./DEFAULT_OPTIONS.js&apos;;
 
-export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
-
-	if ( options.variant ) {
-		if ( variants.hasOwnProperty(options.variant) ) {
-			options = variants[options.variant] ;
-		}
-		else {
-			throw new ValueError( `unknown Base32 variant ${options.variant}` ) ;
+export default function* _encode(string, options = DEFAULT_OPTIONS) {
+	if (options.variant) {
+		if (Object.prototype.hasOwnProperty.call(variants, options.variant)) {
+			options = variants[options.variant];
+		} else {
+			throw new ValueError(`unknown Base32 variant ${options.variant}`);
 		}
 	}
 
-	let start = 0 ;
+	let start = 0;
 
-	const index = options.index || object( reflect( enumerate( options.alphabet ) ) ) ;
-	const padding = options.padding ;
+	const index = options.index || toObject(inverse(enumerate(options.alphabet)));
+	const padding = options.padding;
 
-	const it = iter(string) ;
+	const it = iter(string);
 
-	while ( true ) {
+	while (true) {
+		const digits = [];
 
-		let digits = [] ;
-
-		let stop = 0
+		let stop = 0;
 
 		do {
-
 			try {
-				digits.push( next( it ) ) ;
+				digits.push(next(it));
+			} catch (error) {
+				if (error instanceof StopIteration) break;
+				else throw error;
 			}
-			catch ( err ) {
-				if ( err instanceof StopIteration ) break ;
-				else throw err ;
-			}
+		} while (++stop &lt; 8);
 
-		} while ( ++stop &lt; 8 ) ;
+		if (stop === 0) break;
 
-		if ( stop === 0 ) break ;
-
-		if ( padding ) {
-
-			stop = digits.indexOf(padding) ;
-			stop = stop === -1 ? digits.length : stop ;
-			if ( stop === 0 ) {
-				const reason = `padding at wrong position in ${digits.join(&apos;&apos;)}` ;
-				const position = { start : start + stop , end : start + stop + 1 } ;
-				throw new Base32EncodeError( reason , string , position ) ;
-			}
-			else if ( stop === 2 || stop === 4 || stop === 5 || stop === 7 ) {
-				for ( let i = stop + 1 ; i &lt; digits.length ; ++i ) {
-					if ( digits[i] !== padding ) {
-						const reason = `incorrect padding end in ${digits.join(&apos;&apos;)}` ;
-						const position = { start : start + i , end : start + i + 1 } ;
-						throw new Base32EncodeError( reason , string , position ) ;
+		if (padding) {
+			stop = digits.indexOf(padding);
+			stop = stop === -1 ? digits.length : stop;
+			if (stop === 0) {
+				const reason = `padding at wrong position in ${digits.join(&apos;&apos;)}`;
+				const position = {start: start + stop, end: start + stop + 1};
+				throw new Base32EncodeError(reason, string, position);
+			} else if (stop === 2 || stop === 4 || stop === 5 || stop === 7) {
+				for (let i = stop + 1; i &lt; digits.length; ++i) {
+					if (digits[i] !== padding) {
+						const reason = `incorrect padding end in ${digits.join(&apos;&apos;)}`;
+						const position = {start: start + i, end: start + i + 1};
+						throw new Base32EncodeError(reason, string, position);
 					}
 				}
 
-				if ( digits.length !== 8 ) {
-					const reason = `missing padding in ${digits.join(&apos;&apos;)}` ;
-					const position = { start : start , end : start + digits.length } ;
-					throw new Base32EncodeError( reason , string , position ) ;
+				if (digits.length !== 8) {
+					const reason = `missing padding in ${digits.join(&apos;&apos;)}`;
+					const position = {start, end: start + digits.length};
+					throw new Base32EncodeError(reason, string, position);
 				}
 			}
-
 		}
 
-		const mask = [ 0 , 3 , 0 , 15 , 1 , 0 , 7 , 0 ] ;
+		const mask = [0, 3, 0, 15, 1, 0, 7, 0];
 
-		for ( let i = 0 ; i &lt; stop ; ++i ) {
+		for (let i = 0; i &lt; stop; ++i) {
+			const digit = digits[i];
 
-			const digit = digits[i] ;
-
-			if ( !index.hasOwnProperty(digit) ) {
-				const reason = `not in alphabet ${digit}` ;
-				const position = { start : start + i , end : start + i + 1 } ;
-				throw new Base32EncodeError( reason , string , position ) ;
+			if (!Object.prototype.hasOwnProperty.call(index, digit)) {
+				const reason = `not in alphabet ${digit}`;
+				const position = {start: start + i, end: start + i + 1};
+				throw new Base32EncodeError(reason, string, position);
 			}
 
-			// a1 a2 a3 a4 a5 b1 b2 b3
+			// A1 a2 a3 a4 a5 b1 b2 b3
 			// b4 b5 c1 c2 c3 c4 c5 d1
 			// d2 d3 d4 d5 e1 e2 e3 e4
 			// e5 f1 f2 f3 f4 f5 g1 g2
 			// g3 g4 g5 h1 h2 h3 h4 h5
-
-			else if ( i + 1 === stop &amp;&amp; ( index[digit] &amp; mask[i] ) ) {
-				const reason = `trailing bits in ${digits.slice(0,i+1).join(&apos;&apos;)}, last digit should be ${options.alphabet[index[digit] &amp; ~mask[i]]}` ;
-				const position = { start : start + i , end : start + i + 1 } ;
-				throw new Base32EncodeError( reason , string , position ) ;
+			else if (i + 1 === stop &amp;&amp; index[digit] &amp; mask[i]) {
+				const reason = `trailing bits in ${digits
+					.slice(0, i + 1)
+					.join(&apos;&apos;)}, last digit should be ${
+					options.alphabet[index[digit] &amp; ~mask[i]]
+				}`;
+				const position = {start: start + i, end: start + i + 1};
+				throw new Base32EncodeError(reason, string, position);
 			}
-
 		}
 
-		const [ a , b , c , d , e , f , g , h ] = digits ;
-		let reason, position ;
-		switch ( stop ) {
+		const [a, b, c, d, e, f, g, h] = digits;
+		let reason;
+		let position;
+		// eslint-disable-next-line default-case
+		switch (stop) {
 			case 8:
-				yield* char8tobyte5(index, a, b, c, d, e, f, g, h) ;
-				start += 8 ;
+				yield* char8tobyte5(index, a, b, c, d, e, f, g, h);
+				start += 8;
 				continue;
 			case 7:
-				yield* char7tobyte4(index, a, b, c, d, e, f, g) ;
+				yield* char7tobyte4(index, a, b, c, d, e, f, g);
 				break;
 			case 6:
-				reason = `unterminated byte sequence ${a}${b}${c}${d}${e}${f}` ;
-				position = { start : start , end : start + 6 } ;
-				throw new Base32EncodeError( reason , string , position ) ;
+				reason = `unterminated byte sequence ${a}${b}${c}${d}${e}${f}`;
+				position = {start, end: start + 6};
+				throw new Base32EncodeError(reason, string, position);
 			case 5:
-				yield* char5tobyte3(index, a, b, c, d, e) ;
+				yield* char5tobyte3(index, a, b, c, d, e);
 				break;
 			case 4:
-				yield* char4tobyte2(index, a, b, c, d) ;
+				yield* char4tobyte2(index, a, b, c, d);
 				break;
 			case 3:
-				reason = `unterminated byte sequence ${a}${b}${c}` ;
-				position = { start : start , end : start + 3 } ;
-				throw new Base32EncodeError( reason , string , position ) ;
+				reason = `unterminated byte sequence ${a}${b}${c}`;
+				position = {start, end: start + 3};
+				throw new Base32EncodeError(reason, string, position);
 			case 2:
-				yield* char2tobyte1(index, a, b) ;
+				yield* char2tobyte1(index, a, b);
 				break;
 			case 1:
-				reason = `unterminated byte sequence ${a}` ;
-				position = { start : start , end : start + 1 } ;
-				throw new Base32EncodeError( reason , string , position ) ;
+				reason = `unterminated byte sequence ${a}`;
+				position = {start, end: start + 1};
+				throw new Base32EncodeError(reason, string, position);
 		}
 
-		if ( padding ) {
-
-			let extra ;
+		if (padding) {
+			let extra;
 
 			try {
-				extra = next( it ) ;
+				extra = next(it);
+			} catch (error) {
+				if (error instanceof StopIteration) break;
+				else throw error;
 			}
-			catch ( err ) {
-				if ( err instanceof StopIteration ) break ;
-				else throw err ;
-			}
 
-			reason = `input continues after padding ${extra}` ;
-			position = { start : start + 8 , end : start + 9 } ;
+			reason = `input continues after padding ${extra}`;
+			position = {start: start + 8, end: start + 9};
 
-			throw new Base32EncodeError( reason , string , position ) ;
-
-		}
-
-		else break ;
-
+			throw new Base32EncodeError(reason, string, position);
+		} else break;
 	}
-
 }
 </code></pre>
 
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>
