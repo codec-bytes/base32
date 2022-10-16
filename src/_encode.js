@@ -4,16 +4,16 @@ import {enumerate} from '@iterable-iterator/zip';
 import { toObject , inverse } from '@iterable-iterator/mapping' ;
 import { ValueError } from '@failure-abstraction/error' ;
 
-import char8tobyte5 from './char8tobyte5' ;
-import char7tobyte4 from './char7tobyte4' ;
-import char5tobyte3 from './char5tobyte3' ;
-import char4tobyte2 from './char4tobyte2' ;
-import char2tobyte1 from './char2tobyte1' ;
+import char8tobyte5 from './char8tobyte5.js' ;
+import char7tobyte4 from './char7tobyte4.js' ;
+import char5tobyte3 from './char5tobyte3.js' ;
+import char4tobyte2 from './char4tobyte2.js' ;
+import char2tobyte1 from './char2tobyte1.js' ;
 
-import Base32EncodeError from './Base32EncodeError' ;
+import Base32EncodeError from './Base32EncodeError.js' ;
 
-import variants from './variants' ;
-import DEFAULT_OPTIONS from './DEFAULT_OPTIONS' ;
+import variants from './variants.js' ;
+import DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js' ;
 
 export default function* _encode ( string , options = DEFAULT_OPTIONS ) {
 

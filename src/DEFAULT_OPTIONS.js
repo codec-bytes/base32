@@ -1,3 +1,3 @@
-import variants from './variants' ;
+import variants from './variants.js' ;
 
 export default variants['default'] ;

@@ -2,16 +2,16 @@ import {iter} from '@iterable-iterator/iter';
 import {next, StopIteration} from '@iterable-iterator/next';
 import { ValueError } from '@failure-abstraction/error' ;
 
-import byte5tochar8 from './byte5tochar8' ;
-import byte4tochar7 from './byte4tochar7' ;
-import byte3tochar5 from './byte3tochar5' ;
-import byte2tochar4 from './byte2tochar4' ;
-import byte1tochar2 from './byte1tochar2' ;
+import byte5tochar8 from './byte5tochar8.js' ;
+import byte4tochar7 from './byte4tochar7.js' ;
+import byte3tochar5 from './byte3tochar5.js' ;
+import byte2tochar4 from './byte2tochar4.js' ;
+import byte1tochar2 from './byte1tochar2.js' ;
 
-import Base32DecodeError from './Base32DecodeError' ;
+import Base32DecodeError from './Base32DecodeError.js' ;
 
-import variants from './variants' ;
-import DEFAULT_OPTIONS from './DEFAULT_OPTIONS' ;
+import variants from './variants.js' ;
+import DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js' ;
 
 export default function* _decode ( bytes , options = DEFAULT_OPTIONS ) {
 

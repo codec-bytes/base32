@@ -1,21 +1,21 @@
-import Base32DecodeError from './Base32DecodeError' ;
-import Base32EncodeError from './Base32EncodeError' ;
-import DEFAULT_OPTIONS from './DEFAULT_OPTIONS' ;
-import _decode from './_decode' ;
-import _encode from './_encode' ;
-import byte1tochar2 from './byte1tochar2' ;
-import byte2tochar4 from './byte2tochar4' ;
-import byte3tochar5 from './byte3tochar5' ;
-import byte4tochar7 from './byte4tochar7' ;
-import byte5tochar8 from './byte5tochar8' ;
-import char2tobyte1 from './char2tobyte1' ;
-import char4tobyte2 from './char4tobyte2' ;
-import char5tobyte3 from './char5tobyte3' ;
-import char7tobyte4 from './char7tobyte4' ;
-import char8tobyte5 from './char8tobyte5' ;
-import decode from './decode' ;
-import encode from './encode' ;
-import variants from './variants' ;
+import Base32DecodeError from './Base32DecodeError.js' ;
+import Base32EncodeError from './Base32EncodeError.js' ;
+import DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js' ;
+import _decode from './_decode.js' ;
+import _encode from './_encode.js' ;
+import byte1tochar2 from './byte1tochar2.js' ;
+import byte2tochar4 from './byte2tochar4.js' ;
+import byte3tochar5 from './byte3tochar5.js' ;
+import byte4tochar7 from './byte4tochar7.js' ;
+import byte5tochar8 from './byte5tochar8.js' ;
+import char2tobyte1 from './char2tobyte1.js' ;
+import char4tobyte2 from './char4tobyte2.js' ;
+import char5tobyte3 from './char5tobyte3.js' ;
+import char7tobyte4 from './char7tobyte4.js' ;
+import char8tobyte5 from './char8tobyte5.js' ;
+import decode from './decode.js' ;
+import encode from './encode.js' ;
+import variants from './variants.js' ;
 
 export {
 	Base32DecodeError ,

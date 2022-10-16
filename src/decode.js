@@ -1,5 +1,5 @@
-import _decode from './_decode' ;
-import DEFAULT_OPTIONS from './DEFAULT_OPTIONS' ;
+import _decode from './_decode.js' ;
+import DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js' ;
 
 export default function decode ( bytes , options = DEFAULT_OPTIONS ) {
 

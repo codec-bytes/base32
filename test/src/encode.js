@@ -3,7 +3,7 @@ import * as ascii from '@codec-bytes/ascii' ;
 import { NotImplementedError } from '@failure-abstraction/error' ;
 
 import { ValueError, CodecError } from './_fixtures.js' ;
-import { encode , Base32EncodeError } from '../../src' ;
+import { encode , Base32EncodeError } from '../../src/index.js' ;
 
 function success ( t , string , options , expected ) {
 
