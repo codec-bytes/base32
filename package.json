@@ -1,7 +1,7 @@
 {
   "name": "@codec-bytes/base32",
   "description": "Base32 encoder/decoder for JavaScript",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "license": "AGPL-3.0",
   "author": "make-github-pseudonymous-again",
   "homepage": "https://codec-bytes.github.io/base32",
