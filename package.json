@@ -214,6 +214,14 @@
           "doc/**"
         ],
         "env": "browser"
+      },
+      {
+        "files": [
+          "src/**"
+        ],
+        "rules": {
+          "no-bitwise": "off"
+        }
       }
     ]
   }
