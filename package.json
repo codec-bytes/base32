@@ -75,11 +75,11 @@
     "@babel/plugin-transform-destructuring": "7.19.4",
     "@babel/plugin-transform-for-of": "7.18.8",
     "@babel/preset-env": "7.13.10",
-    "@babel/register": "7.13.8",
     "@codec-bytes/ascii": "^3.0.0",
     "@commitlint/cli": "17.1.2",
     "@js-library/commitlint-config": "0.0.4",
-    "ava": "3.15.0",
+    "@node-loader/babel": "2.0.1",
+    "ava": "4.3.3",
     "babel-plugin-transform-remove-console": "6.9.4",
     "babel-plugin-unassert": "3.0.1",
     "babel-preset-power-assert": "3.0.0",
@@ -100,24 +100,18 @@
   },
   "ava": {
     "require": [
-      "regenerator-runtime/runtime",
-      "@babel/register"
+      "regenerator-runtime/runtime"
     ],
     "files": [
       "test/src/**/*"
     ],
-    "timeout": "1m"
+    "timeout": "1m",
+    "nodeArguments": [
+      "--experimental-loader=@node-loader/babel"
+    ]
   },
   "babel": {
     "sourceMaps": true,
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": "current node"
-        }
-      ]
-    ],
     "plugins": [
       [
         "transform-remove-console",
