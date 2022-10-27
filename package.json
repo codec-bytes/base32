@@ -78,7 +78,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.19.6",
-    "@babel/plugin-transform-destructuring": "7.19.4",
+    "@babel/plugin-transform-destructuring": "7.20.0",
     "@babel/plugin-transform-for-of": "7.18.8",
     "@babel/preset-env": "7.19.4",
     "@codec-bytes/ascii": "3.0.0",
