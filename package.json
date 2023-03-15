@@ -77,8 +77,8 @@
     "@iterable-iterator/zip": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.21.0",
-    "@babel/plugin-transform-destructuring": "7.20.7",
+    "@babel/core": "7.21.3",
+    "@babel/plugin-transform-destructuring": "7.21.3",
     "@babel/plugin-transform-for-of": "7.21.0",
     "@babel/preset-env": "7.20.2",
     "@codec-bytes/ascii": "3.0.0",
