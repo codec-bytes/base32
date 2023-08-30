@@ -80,7 +80,7 @@
     "@babel/core": "7.22.11",
     "@babel/plugin-transform-destructuring": "7.22.10",
     "@babel/plugin-transform-for-of": "7.22.5",
-    "@babel/preset-env": "7.22.10",
+    "@babel/preset-env": "7.22.14",
     "@codec-bytes/ascii": "3.0.0",
     "@commitlint/cli": "17.7.1",
     "@js-library/commitlint-config": "0.0.4",
