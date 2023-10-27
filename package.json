@@ -82,7 +82,7 @@
     "@babel/plugin-transform-for-of": "7.22.15",
     "@babel/preset-env": "7.23.2",
     "@codec-bytes/ascii": "3.0.0",
-    "@commitlint/cli": "18.1.0",
+    "@commitlint/cli": "18.2.0",
     "@js-library/commitlint-config": "0.0.4",
     "@node-loader/babel": "2.0.1",
     "@node-loader/core": "2.0.0",
