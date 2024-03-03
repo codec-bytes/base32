@@ -19,7 +19,7 @@ base32.decode(bytes, {alphabet: 'BCDEFGHIJKLMNOPQRSTUVWXYZ234567A', padding: '.'
 
 [![License](https://img.shields.io/github/license/codec-bytes/base32.svg)](https://raw.githubusercontent.com/codec-bytes/base32/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@codec-bytes/base32.svg)](https://www.npmjs.org/package/@codec-bytes/base32)
-[![Tests](https://img.shields.io/github/workflow/status/codec-bytes/base32/ci?event=push&label=tests)](https://github.com/codec-bytes/base32/actions/workflows/ci.yml?query=branch:main)
+[![Tests](https://img.shields.io/github/actions/workflow/status/codec-bytes/base32/ci.yml?branch=main&event=push&label=tests)](https://github.com/codec-bytes/base32/actions/workflows/ci.yml?query=branch:main)
 [![Dependencies](https://img.shields.io/librariesio/github/codec-bytes/base32.svg)](https://github.com/codec-bytes/base32/network/dependencies)
 [![GitHub issues](https://img.shields.io/github/issues/codec-bytes/base32.svg)](https://github.com/codec-bytes/base32/issues)
 [![Downloads](https://img.shields.io/npm/dm/@codec-bytes/base32.svg)](https://www.npmjs.org/package/@codec-bytes/base32)
