@@ -1,23 +1,21 @@
+import {ValueError} from '@failure-abstraction/error';
 import {iter} from '@iterable-iterator/iter';
+import {toObject, inverse} from '@iterable-iterator/mapping';
 import {next, StopIteration} from '@iterable-iterator/next';
 import {enumerate} from '@iterable-iterator/zip';
-import {toObject, inverse} from '@iterable-iterator/mapping';
-import {ValueError} from '@failure-abstraction/error';
-
-import char8tobyte5 from './char8tobyte5.js';
-import char7tobyte4 from './char7tobyte4.js';
-import char5tobyte3 from './char5tobyte3.js';
-import char4tobyte2 from './char4tobyte2.js';
-import char2tobyte1 from './char2tobyte1.js';
 
 import Base32EncodeError from './Base32EncodeError.js';
-
-import variants from './variants.js';
 import DEFAULT_OPTIONS from './DEFAULT_OPTIONS.js';
+import char2tobyte1 from './char2tobyte1.js';
+import char4tobyte2 from './char4tobyte2.js';
+import char5tobyte3 from './char5tobyte3.js';
+import char7tobyte4 from './char7tobyte4.js';
+import char8tobyte5 from './char8tobyte5.js';
+import variants from './variants.js';
 
 export default function* _encode(string, options = DEFAULT_OPTIONS) {
 	if (options.variant) {
-		if (Object.prototype.hasOwnProperty.call(variants, options.variant)) {
+		if (Object.hasOwn(variants, options.variant)) {
 			options = variants[options.variant];
 		} else {
 			throw new ValueError(`unknown Base32 variant ${options.variant}`);
@@ -76,7 +74,7 @@ export default function* _encode(string, options = DEFAULT_OPTIONS) {
 		for (let i = 0; i < stop; ++i) {
 			const digit = digits[i];
 
-			if (!Object.prototype.hasOwnProperty.call(index, digit)) {
+			if (!Object.hasOwn(index, digit)) {
 				const reason = `not in alphabet ${digit}`;
 				const position = {start: start + i, end: start + i + 1};
 				throw new Base32EncodeError(reason, string, position);
@@ -103,34 +101,49 @@ export default function* _encode(string, options = DEFAULT_OPTIONS) {
 		let position;
 		// eslint-disable-next-line default-case
 		switch (stop) {
-			case 8:
+			case 8: {
 				yield* char8tobyte5(index, a, b, c, d, e, f, g, h);
 				start += 8;
 				continue;
-			case 7:
+			}
+
+			case 7: {
 				yield* char7tobyte4(index, a, b, c, d, e, f, g);
 				break;
-			case 6:
+			}
+
+			case 6: {
 				reason = `unterminated byte sequence ${a}${b}${c}${d}${e}${f}`;
 				position = {start, end: start + 6};
 				throw new Base32EncodeError(reason, string, position);
-			case 5:
+			}
+
+			case 5: {
 				yield* char5tobyte3(index, a, b, c, d, e);
 				break;
-			case 4:
+			}
+
+			case 4: {
 				yield* char4tobyte2(index, a, b, c, d);
 				break;
-			case 3:
+			}
+
+			case 3: {
 				reason = `unterminated byte sequence ${a}${b}${c}`;
 				position = {start, end: start + 3};
 				throw new Base32EncodeError(reason, string, position);
-			case 2:
+			}
+
+			case 2: {
 				yield* char2tobyte1(index, a, b);
 				break;
-			case 1:
+			}
+
+			case 1: {
 				reason = `unterminated byte sequence ${a}`;
 				position = {start, end: start + 1};
 				throw new Base32EncodeError(reason, string, position);
+			}
 		}
 
 		if (padding) {

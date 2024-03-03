@@ -1,6 +1,5 @@
-import {enumerate} from '@iterable-iterator/zip';
-
 import {toObject, inverse} from '@iterable-iterator/mapping';
+import {enumerate} from '@iterable-iterator/zip';
 
 const variants = {
 	// Standard ``base32''
