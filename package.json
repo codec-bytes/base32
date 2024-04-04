@@ -77,10 +77,10 @@
     "@iterable-iterator/zip": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.24.3",
+    "@babel/core": "7.24.4",
     "@babel/plugin-transform-destructuring": "7.24.1",
     "@babel/plugin-transform-for-of": "7.24.1",
-    "@babel/preset-env": "7.24.3",
+    "@babel/preset-env": "7.24.4",
     "@codec-bytes/ascii": "3.0.0",
     "@commitlint/cli": "19.2.1",
     "@js-library/commitlint-config": "0.0.4",
